@@ -1,7 +1,6 @@
 # Личный проект «Пинк» 
 
 * Студент: [Александр Новиков](https://up.htmlacademy.ru/adaptive/23/user/1733897).
-
 * Наставник: `Елизавета Цыгвинцева` (https://htmlacademy.ru/profile/ijwby).
 
 
