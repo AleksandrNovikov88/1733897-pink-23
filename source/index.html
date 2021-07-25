@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
 </head>
-
 <body class="page__body">
   <header class="page-header">
     <a class="page-header__logo">
@@ -14,23 +12,23 @@
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
             <a href="javascript:void(0)">
               Главная
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="site-list__item">
             <a href="javascript:void(0)">
               Фотографии
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="site-list__item">
             <a href="javascript:void(0)">
               Конкурс
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="site-list__item">
             <a href="javascript:void(0)">
               HTML Academy
             </a>
@@ -51,110 +49,121 @@
     <section class="information">
       <h2 class="visually-hidden">Преимущества приложения</h2>
       <div class="information__wrapper">
-        <div class="information__header-text">
+        <header class="information__header-text">
           <p>
             Устали от серости мегаполиса? Нам есть, что вам предложить!
           </p>
-        </div>
-        <div class="information__features">
-          <dl class="information__features-list">
-            <dt class="information__features-item">Поднимает настроение</dt>
-            <dd class="infomation__features-description">
-              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-            </dd>
-            <dt class="information__features-item">Меняет мир вокруг</dt>
-            <dd class="infomation__features-description">
-              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-            </dd>
-            <dt class="information__features-item">Заводит новых друзей</dt>
-            <dd class="infomation__features-description">
-              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-            </dd>
-          </dl>
-        </div>
+        </header>
+        <dl class="information__list">
+          <dt class="information__item">Поднимает настроение</dt>
+          <dd class="infomation__description">
+            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+          </dd>
+          <dt class="information__item">Меняет мир вокруг</dt>
+          <dd class="infomation__description">
+            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          </dd>
+          <dt class="information__item">Заводит новых друзей</dt>
+          <dd class="infomation__description">
+            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+          </dd>
+        </dl>
       </div>
       <img src="img/iphone.jpg" width="157" height="320" alt="Фотография с розовым фильтром на экране смартфона">
     </section>
     <section class="reviews">
       <div class="reviews__wrapper slider">
         <h2 class="visually-hidden">Отзывы о приложении</h2>
-        <div class="slider__reviews">
-          <ul>
-            <li>
-              <blockquote>
-                <cite>Николай Петров</cite>
-                <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                  А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-                </p>
-              </blockquote>
-            </li>
-            <li>
-
-            </li>
-            <li>
-              
-            </li>
-          </ul>
-        </div>
-        <div class="slider__controls">
-          <button class="slider__current" type="button" aria-label="Первый слайд"></button>
-          <button type="button" aria-label="Второй слайд"></button>
-          <button type="button" aria-label="Третий слайд"></button>
-        </div>
+        <ul class="reviews__list slider__list">
+          <li class="reviews__item slider__item">
+            <blockquote>
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+                серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </p>
+            </blockquote>
+          </li>
+          <li class="reviews__item slider__item">
+            <blockquote>
+              <cite class="reviews__author-name"></cite>
+              <p class="reviews__text">
+              </p>
+            </blockquote>
+          </li>
+          <li class="reviews__item slider__item">
+            <blockquote>
+              <cite class="reviews__author-name"></cite>
+              <p class="reviews__text">
+              </p>
+            </blockquote>
+          </li>
+        </ul>
+        <p class="reviews__toggles slider-toggles">
+          <button class="slider__toggle slider__toggle--current" type="button">1</button>
+          <button class="slider__toggle" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
+        </p>
       </div>
     </section>
     <section class="table-price">
       <h2 class="visually-hidden">Прайс</h2>
-      <div class="table-price__wrapper">
-        <table>
+      <div class="table-price__wrapper slider">
+        <table class="table-price__list slider__list">
           <tr>
-            <th></th>
+            <th>
+              <p>База</p>
+              <span>1,99 USD</span>
+            </th>
             <th>
               <span>Хит</span>
-              <span>Стандарт</span>
-              <span>3,99 Usd</span>
+              <p>Стандарт</p>
+              <span>3,99 USD</span>
             </th>
-            <th></th>
+            <th>
+              <p>Англим</p>
+              <span>9,99 USD</span>
+            </th>
           </tr>
           <tr>
-            <td></td>
             <td>Розовый фильтр</td>
-            <td></td>
+            <td>Розовый фильтр</td>
+            <td>Розовый фильтр</td>
           </tr>
           <tr>
-            <td></td>
             <td>Смайлики</td>
-            <td></td>
+            <td>Смайлики</td>
+            <td>Смайлики</td>
           </tr>
           <tr>
-            <td></td>
             <td>Комментарии</td>
-            <td></td>
+            <td>Комментарии</td>
+            <td>Комментарии</td>
           </tr>
         </table>
-        <div class="slider__controls">
-          <button type="button" aria-label="Первый слайд"></button>
-          <button class="slider__current" type="button" aria-label="Второй слайд"></button>
-          <button type="button" aria-label="Третий слайд"></button>
-        </div>
+        <p class="table-price__toggles slider-toggles">
+          <button class="slider__toggle" type="button">1</button>
+          <button class="slider__toggle slider__toggle--current" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
+        </p>
       </div>
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__wrapper">
-        <p>Остались вопросы? Свяжитесь с нами!</p>
-        <ul>
-          <li>
-            <p>Звоните:</p>
-            <p><a class="contacts__phone" href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+      <div class="contacts__wrapper contacts">
+        <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
+        <ul class="contacts__list">
+          <li class="contact__item">
+            <p class="contacts__text">Звоните:</p>
+            <p><a class="contact__phone" href="tel:+78125556666">+7 (812) 555-66-66</a></p>
           </li>
-          <li>
-            <p>Пишите:</p>
-            <p><a class="contacts__email" href="mailto:mail@htmlacademy.ru"></a>mail@htmlacademy.ru</p>
+          <li class="contact__item">
+            <p class="contacts__text">Пишите:</p>
+            <p><a class="contact__email" href="mailto:mail@htmlacademy.ru"></a>mail@htmlacademy.ru</p>
           </li>
-          <li>
-            <p>Приезжайте в гости:</p>
-            <p>ул. Большая Конюшенная, 19/8</p>
+          <li class="contact__item">
+            <p class="contacts__text">Приезжайте в гости:</p>
+            <p class="contact__address">ул. Большая Конюшенная, 19/8</p>
           </li>
         </ul>
         <img src="img/map.png" width="320" height="200" alt="Карта с маркером Pink">
