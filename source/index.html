@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru" class="page">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
 </head>
+
 <body class="page__body">
   <header class="page-header">
     <a class="page-header__logo">
@@ -19,12 +21,12 @@
             </a>
           </li>
           <li class="site-list__item">
-            <a href="javascript:void(0)">
+            <a href="catalog.html">
               Фотографии
             </a>
           </li>
           <li class="site-list__item">
-            <a href="javascript:void(0)">
+            <a href="form.html">
               Конкурс
             </a>
           </li>
@@ -41,7 +43,20 @@
     <h1 class="visually-hidden">Приложение для смартфона Pink</h1>
     <section class="intro">
       <h2>Взгляните на жизнь иначе!</h2>
-      <button class="intro__toggle" type="button">Скачать приложение</button>
+      <form class="intro__toggle" action="https://ap-store.ru/" target="_blank">
+        <button>Скачать приложение</button>
+      </form>
+      <ul>
+        <li>
+          <a href="https://www.apple.com/ru/"><span class="visually-hidden">apple</span></a>
+        </li>
+        <li>
+          <a href="https://www.android.com/"><span class="visually-hidden">android</span></a>
+        </li>
+        <li>
+          <a href="https://www.microsoft.com/ru-ru/"><span class="visually-hidden">windows</span></a>
+        </li>
+      </ul>
       <p class="intro__text">
         Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
       </p>
@@ -49,25 +64,28 @@
     <section class="information">
       <h2 class="visually-hidden">Преимущества приложения</h2>
       <div class="information__wrapper">
-        <header class="information__header-text">
-          <p>
-            Устали от серости мегаполиса? Нам есть, что вам предложить!
-          </p>
-        </header>
-        <dl class="information__list">
-          <dt class="information__item">Поднимает настроение</dt>
-          <dd class="infomation__description">
-            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-          </dd>
-          <dt class="information__item">Меняет мир вокруг</dt>
-          <dd class="infomation__description">
-            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-          </dd>
-          <dt class="information__item">Заводит новых друзей</dt>
-          <dd class="infomation__description">
-            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-          </dd>
-        </dl>
+        <h2 class="information__header-text"> Устали от серости мегаполиса? Нам есть, что вам предложить!
+        </h2>
+        <ul class="information__list">
+          <li class="information__item">
+            <h3>Поднимает настроение</h3>
+            <p class="information__description">
+              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+            </p>
+          </li>
+          <li class="information__item">
+            <h3>Меняет мир вокруг</h3>
+            <p class="information__description">
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
+          </li>
+          <li class="information__item">
+            <h3>Заводит новых друзей</h3>
+            <p class="information__description">
+              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+            </p>
+          </li>
+        </ul>
       </div>
       <img src="img/iphone.jpg" width="157" height="320" alt="Фотография с розовым фильтром на экране смартфона">
     </section>
@@ -86,15 +104,19 @@
           </li>
           <li class="reviews__item slider__item">
             <blockquote>
-              <cite class="reviews__author-name"></cite>
-              <p class="reviews__text">
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+                серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
               </p>
             </blockquote>
           </li>
           <li class="reviews__item slider__item">
             <blockquote>
-              <cite class="reviews__author-name"></cite>
-              <p class="reviews__text">
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+                серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
               </p>
             </blockquote>
           </li>
@@ -111,6 +133,8 @@
       <div class="table-price__wrapper slider">
         <table class="table-price__list slider__list">
           <tr>
+            <th><span class="visually-hidden">Наименование</span>
+            </th>
             <th>
               <p>База</p>
               <span>1,99 USD</span>
@@ -129,13 +153,16 @@
             <td>Розовый фильтр</td>
             <td>Розовый фильтр</td>
             <td>Розовый фильтр</td>
+            <td>Розовый фильтр</td>
           </tr>
           <tr>
             <td>Смайлики</td>
             <td>Смайлики</td>
             <td>Смайлики</td>
+            <td>Смайлики</td>
           </tr>
           <tr>
+            <td>Комментарии</td>
             <td>Комментарии</td>
             <td>Комментарии</td>
             <td>Комментарии</td>
@@ -150,20 +177,20 @@
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__wrapper contacts">
-        <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
+      <div class="contacts">
+        <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
         <ul class="contacts__list">
-          <li class="contact__item">
+          <li class="contacts__item">
             <p class="contacts__text">Звоните:</p>
-            <p><a class="contact__phone" href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+            <a class="contacts__phone contact" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </li>
-          <li class="contact__item">
+          <li class="contacts__item">
             <p class="contacts__text">Пишите:</p>
-            <p><a class="contact__email" href="mailto:mail@htmlacademy.ru"></a>mail@htmlacademy.ru</p>
+            <a class="contacts__email contact" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
-          <li class="contact__item">
+          <li class="contacts__item">
             <p class="contacts__text">Приезжайте в гости:</p>
-            <p class="contact__address">ул. Большая Конюшенная, 19/8</p>
+            <p class="contacts__address contact">ул. Большая Конюшенная, 19/8</p>
           </li>
         </ul>
         <img src="img/map.png" width="320" height="200" alt="Карта с маркером Pink">
@@ -172,12 +199,11 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <div class="page-footer__logo">
-        <a>
-          <img src="img/logotype-pink-footer.svg" width="145" height="40" alt="Логотип Пинк c розовыми очками">
-        </a>
-      </div>
-      <div class="page-footer__social social">
+      <a class="page-footer__logo">
+        <img src="img/logotype-pink-footer.svg" width="145" height="40" alt="Логотип Пинк c розовыми очками">
+      </a>
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="javascript:void(0)">
@@ -210,10 +236,10 @@
             </a>
           </li>
         </ul>
-      </div>
+      </section>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано:</p>
-        <a class="copyright__link" href="javascript:void(0)">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
