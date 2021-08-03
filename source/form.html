@@ -40,7 +40,7 @@
       </nav>
     </header>
     <main class="page-main">
-      <h2>Конкурс на самое безбашенное путешествие с Пинк</h2>
+      <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
       <p class="username__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="username">
@@ -63,51 +63,57 @@
           <legend class="achievements__text">Ваши безбашенные достижения в путешествии</legend>
             <ul class="achievements__list">
               <li class="achievements__item">
-                <input class="visually-hidden form__input-switch--checkbox" type="checkbox" name="shark" id="shark" checked>
-                <label class="form__label-switch--checkbox" for="shark">Сделал селфи с акулой</label> 
+                <input class="visually-hidden form__input-switch form__input-switch--checkbox" type="checkbox" name="shark" id="shark" checked>
+                <label class="form__label-switch form__label-switch--checkbox" for="shark">Сделал селфи с акулой</label> 
               </li>
               <li class="achievements__item">
-                <input class="visually-hidden form__input-switch--checkbox" type="checkbox" name="beach" id="beach" checked>
-                <label class="form__label-switch--checkbox" for="beach">Обгорел на пляже</label>
+                <input class="visually-hidden form__input-switch form__input-switch--checkbox" type="checkbox" name="beach" id="beach" checked>
+                <label class="form__label-switch form__label-switch--checkbox" for="beach">Обгорел на пляже</label>
               </li>
               <li class="achievements__item">
-                <input class="visually-hidden form__input-switch--checkbox" type="checkbox" name="chuck" id="chuck">
-                <label class="form__label-switch--checkbox" for="chuck">Видел Чака Норриса</label>
+                <input class="visually-hidden form__input-switch form__input-switch--checkbox" type="checkbox" name="chuck" id="chuck">
+                <label class="form__label-switch form__label-switch--checkbox" for="chuck">Видел Чака Норриса</label>
               </li>
               <li class="achievements__item">
-                <input class="visually-hidden form__input-switch--checkbox" type="checkbox" name="souvenirs" id="souvenirs">
-                <label class="form__label-switch--checkbox" for="souvenirs">Накупил сувениров</label>
+                <input class="visually-hidden form__input-switch form__input-switch--checkbox" type="checkbox" name="souvenirs" id="souvenirs">
+                <label class="form__label-switch form__label-switch--checkbox" for="souvenirs">Накупил сувениров</label>
               </li>
               <li class="achievements__item">
-                <input class="visually-hidden form__input-switch--checkbox" type="checkbox" name="tower" id="tower" checked>
-                <label class="form__label-switch--checkbox" for="tower">Удержал башню</label>
+                <input class="visually-hidden form__input-switch form__input-switch--checkbox" type="checkbox" name="tower" id="tower" checked>
+                <label class="form__label-switch form__label-switch--checkbox" for="tower">Удержал башню</label>
               </li>
               <li class="achievements__item">
-                <input class="visually-hidden form__input-switch--checkbox" type="checkbox" name="hotel" id="hotel">
-                <label class="form__label-switch--checkbox" for="hotel">Разгромил отель</label>
+                <input class="visually-hidden form__input-switch form__input-switch--checkbox" type="checkbox" name="hotel" id="hotel">
+                <label class="form__label-switch form__label-switch--checkbox" for="hotel">Разгромил отель</label>
               </li>
             </ul>
         </fieldset>
         <fieldset class="user-contacts">
-          <label class="form__label" for="number">Номер телефона:</label>
-          <input class="form__input" type="tel" name="number" placeholder="Номер, пожалуйста" id="number">
-          <label class="form__label" for="email">Адрес почты:</label>
-          <input class="form__input" type="email" name="email" placeholder="Введите почту *" id="email" required>
+          <ul>
+            <li>
+              <label class="form__label" for="number">Номер телефона:</label>
+              <input class="form__input" type="tel" name="number" placeholder="Номер, пожалуйста" id="number">
+            </li>
+            <li>
+              <label class="form__label" for="email">Адрес почты:</label>
+              <input class="form__input" type="email" name="email" placeholder="Введите почту *" id="email" required>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="operating-system">
           <legend class="operating-system__text">С каким приложением путешествовали?</legend>
           <ul class="operating-system__list">
             <li class="operating-system__item">
-              <input class="visually-hidden form__input-switch--radio" type="radio" name="system" id="apple" value="apple" checked>
-              <label class="form__label-switch--rаdio" for="apple">Pink для iOS</label>
+              <input class="visually-hidden form__input-switch form__input-switch--radio" type="radio" name="system" id="apple" value="apple" checked>
+              <label class="form__label-switch form__label-switch--rаdio" for="apple">Pink для iOS</label>
             </li>
             <li class="operating-system__item">
-              <input class="visually-hidden form__input-switch--radio" type="radio" name="system" id="android" value="android">
-              <label class="form__label-switch--rаdio" for="android">Pink на Android</label>
+              <input class="visually-hidden form__input-switch form__input-switch--radio" type="radio" name="system" id="android" value="android">
+              <label class="form__label-switch form__label-switch--rаdio" for="android">Pink на Android</label>
             </li>
             <li class="operating-system__item">
-              <input class="visually-hidden form__input-switch--radio" type="radio" name="system" id="windows" value="windows">
-              <label class="form__label-switch--rаdio" for="windows">Windows Phone</label>
+              <input class="visually-hidden form__input-switch form__input-switch--radio" type="radio" name="system" id="windows" value="windows">
+              <label class="form__label-switch form__label-switch--rаdio" for="windows">Windows Phone</label>
             </li>
           </ul>
         </fieldset>
