@@ -1,0 +1,33 @@
+// @import "blocks/table-price";
+
+.table-price {
+  background-color: $lightgrey;
+}
+
+.table-price__table-head {
+  background-color: $menu-color;
+}
+
+.table-price__table-head p {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.table-price__table-head span {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.table-price__table-data {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $menu-color;
+}

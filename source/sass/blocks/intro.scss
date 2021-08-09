@@ -1,0 +1,33 @@
+// @import ("blocks/intro.scss");
+
+.intro {
+  background-color: $blueblack;
+}
+
+.intro__toggle {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: $white;
+  text-decoration: none;
+  border: 3px solid rgb(255, 255, 255);
+  padding: 21px 39px 21px 38px;
+  border-radius: 29px;
+  display: block;
+}
+
+.intro__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: $white;
+  width: 280px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 38px;
+}
+
+.intro__list {
+  @include list-style;
+}
+

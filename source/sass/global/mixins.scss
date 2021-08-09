@@ -1,0 +1,19 @@
+// @import "global/mixins.scss";
+
+@mixin list-style {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 280px;
+}
+
+@mixin button-style {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $green;
+  border: none;
+  border-radius: 3px;
+}

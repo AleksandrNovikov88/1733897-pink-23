@@ -41,78 +41,80 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1>Фотографии пользователей</h1>
+      <div class="page-main__title-container">
+        <h1 class="page-main__title">Фотографии пользователей</h1>
+      </div>
       <section class="users-photo">
         <div class="users-photo__wrapper">
           <h2 class="visually-hidden">Галерея с фотографиями других пользователей</h2>
-          <p class="users-photo__text">Взгляните на фотографии, которые выкладывают пользователи!
+          <p class="users-photo__text">Взгляните на фотографии, которые выкладывают пользователи!<br>
             Видите, как не хватает ваших?</p>
           <ul class="users-photo__list">
             <li class="users-photo__item">
-              <span>Панорама дня</span>
+              <span class="users-photo__panorama">Панорама дня</span>
               <a href="javascript:void(0)"><img src="img/catalog/panorama-tablet.jpg" width="320" height="137" alt="Вид на навестной мост и реку внизу красивого ущелья"></a>
               <blockquote>
-                <cite>Анна</cite>
-                <span>(5 минут назад)</span>
+                <cite class="users-photo__author">Анна</cite>
+                <span class="users-photo__time">(5 минут назад)</span>
                 <p>Прыгать или нет? Напишите в
                   комментарии свой совет и
                   смотрите прямую трансляцию в
                   перископе, задавайте свои вопросы!</p>
-                <span>Нравится: 215</span>
+                <span class="users-photo__likes">Нравится: 215</span>
               </blockquote>
             </li>
             <li class="users-photo__item">
               <a href="javascript:void(0)"><img src="img/catalog/photo-1-mobile.jpg" width="280" height="180" alt="Автомобиль на фотосессии"></a>
               <blockquote>
-                <cite>Левон</cite>
-                <span>(5 часов назад)</span>
+                <cite class="users-photo__author">Левон</cite>
+                <span class="users-photo__time">(5 часов назад)</span>
                 <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <span>Нравится: 356</span>
+                <span class="users-photo__likes">Нравится: 356</span>
               </blockquote>
             </li>
             <li class="users-photo__item">
               <a href="javascript:void(0)"><img src="img/catalog/photo-2-mobile.jpg" width="280" height="180" alt="Барабанная установка"></a>
               <blockquote>
-                <cite>Антон</cite>
-                <span>(12 часов назад)</span>
+                <cite class="users-photo__author">Антон</cite>
+                <span class="users-photo__time">(12 часов назад)</span>
                 <p>Соседи будут рады!</p>
-                <span>Нравится: 666</span>
+                <span class="users-photo__likes">Нравится: 666</span>
               </blockquote>
             </li>
             <li class="users-photo__item">
               <a href="javascript:void(0)"><img src="img/catalog/photo-3-tablet.jpg" width="280" height="180" alt="Вид из атриума на небоскрёб"></a>
               <blockquote>
-                <cite>Борис</cite>
-                <span>(20 часов назад)</span>
+                <cite class="users-photo__author">Борис</cite>
+                <span class="users-photo__time">(20 часов назад)</span>
                 <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
-                <span>Нравится: 215</span>
+                <span class="users-photo__likes">Нравится: 215</span>
               </blockquote>
             </li>
             <li class="users-photo__item">
               <a href="javascript:void(0)"><img src="img/catalog/photo-4-tablet.jpg" width="280" height="180" alt="Ярмарка на Кубани"></a>
               <blockquote>
-                <cite>Сергей</cite>
-                <span>(25 часов назад)</span>
+                <cite class="users-photo__author">Сергей</cite>
+                <span class="users-photo__time">(25 часов назад)</span>
                 <p>Самая кубанская в мире!</p>
-                <span>Нравится: 4</span>
+                <span class="users-photo__likes">Нравится: 4</span>
               </blockquote>
             </li>
             <li class="users-photo__item">
             <a href="javascript:void(0)"><img src="img/catalog/photo-5-tablet.jpg" width="280" height="180" alt="Ноги, свисающие над пропастью"></a>
               <blockquote>
-                <cite>Максим</cite>
-                <span>(40 часов назад)</span>
+                <cite class="users-photo__author">Максим</cite>
+                <span class="users-photo__time">(40 часов назад)</span>
                 <p>Где снег-то?</p>
-                <span>Нравится: 150</span>
+                <span class="users-photo__likes">Нравится: 150</span>
               </blockquote>
             </li>
             <li class="users-photo__item">
             <a href="javascript:void(0)"><img src="img/catalog/photo-6-tablet.jpg" width="280" height="180" alt="Вид из иллюминатора самолета"></a>
               <blockquote>
-                <cite>Надежда</cite>
-                <span>(45 часов назад)</span>
+                <cite class="users-photo__author">Надежда</cite>
+                <span class="users-photo__time">(45 часов назад)</span>
                 <p>Всем GM и взаимные лайки!</p>
-                <span>Нравится: 2560</span>
+                <span class="users-photo__likes">Нравится: 2560</span>
               </blockquote>
             </li>
           </ul>
@@ -122,7 +124,7 @@
         <h2 class="visually-hidden">Форма отправки фотографии</h2>
         <div class="upload__wrapper">
           <p class="upload__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
-          <form action="https://echo.htmlacademy.ru" method="get">
+          <form class="upload__form" action="https://echo.htmlacademy.ru" method="get">
             <a href="javascript:void(0)"><img src="img/catalog/photo-7-tablet.jpg" width="280" height="374" alt="Зимняя дорога в лесу"></a>
             <ul class="upload__list">
               <li class="upload__item">

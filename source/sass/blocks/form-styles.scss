@@ -1,0 +1,87 @@
+// @import "blocks/form-styles.scss";
+
+.page-main__form-wrapper {
+  width: 280px;
+  margin: auto;
+}
+
+.username__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: $menu-color;
+  margin: 0;
+  padding: 0;
+  margin-top: 54px;
+  margin-bottom: 55px;
+}
+
+.username,
+.achievements,
+.user-contacts,
+.operating-system,
+.emotions {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.username__list,
+.achievements__list,
+.user-contacts__list,
+.operating-system__list {
+  @include list-style;
+}
+
+.form__label {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  color: $pink;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.form__input {
+  padding: 23px 78px 23px 20px;
+}
+
+.achievements__text,
+.operating-system__text,
+.emotions__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $pink;
+  text-align: center;
+}
+
+.achievements,
+.operating-system {
+  background-color: $lightgrey;
+}
+
+.form__label-switch {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: $menu-color;
+}
+
+.form-container__button {
+  @include button-style;
+}
+
+.form__required-fields {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $menu-color;
+}
+
+.form__required-fields span {
+  color: $pink;
+}

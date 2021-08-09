@@ -1,2 +1,22 @@
+// Global
+@import "global/normalize";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
 
 
+// Blocks
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/information.scss";
+@import "blocks/intro.scss";
+@import "blocks/reviews.scss";
+@import "blocks/table-price.scss";
+@import "blocks/contacts.scss";
+@import "blocks/users-photo.scss";
+@import "blocks/upload.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/form-styles.scss";
+@import "blocks/modal-windows.scss";

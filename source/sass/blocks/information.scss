@@ -1,0 +1,39 @@
+// @import ("blocks/information.scss");
+
+
+.information__header-text {
+  width: 280px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  color: $menu-color;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.information__item h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: $black;
+  margin: 0;
+  text-align: center;
+}
+
+.information__list-container {
+  background-color: $lightgrey;
+}
+
+.information__list {
+  @include list-style;
+  text-align: center;
+}
+
+.information__description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $menu-color;
+  margin: 0;
+  text-align: center;
+}

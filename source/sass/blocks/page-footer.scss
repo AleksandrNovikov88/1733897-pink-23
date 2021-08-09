@@ -1,0 +1,23 @@
+// @import "blocks/page-footer.scss";
+
+.page-footer__wrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__logo {
+  align-self: center;
+}
+
+.page-footer__social {
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__list {
+  list-style: none;
+  display: flex;
+}
