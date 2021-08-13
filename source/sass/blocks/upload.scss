@@ -2,30 +2,90 @@
 
 // Catalog;
 
-.upload__wrapper {
-  width: 280px;
-  margin: auto;
-}
-
 .upload__text {
+  width: 280px;
+  margin-top: 49px;
+  margin-left: 20px;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: $menu-color;
-  margin-top: 49px;
 }
 
-.upload__form {
+.upload__wrapper {
   background-color: $lightgrey;
 }
 
-.upload__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.upload__form {
+  width: 280px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 41px;
 }
 
-.upload__saturation-controls {
-  display: none;
+.upload__picture {
+  margin-bottom: 42px;
+}
+
+.upload__list {
+  display: flex;
+  justify-content: space-between;
+  width: 194px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  margin-bottom: 114px;
+}
+
+.upload__edit-tools {
+  border: none;
+}
+
+.upload__saturation-controls--current {
+  position: absolute;
+  left: -20px;
+}
+
+.upload__scale {
+  height: 2px;
+  background: $menu-color;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 39px;
+}
+
+.upload__toggle {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid $pink;
+  background-color: $white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.upload__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 135px;
+}
+
+.upload__post-it {
+  @include toggle;
+  color: $pink;
+  border: 3px solid $pink;
+  padding: 18px 90px 18px 91px;
+}
+
+.upload__cancel {
+  @include toggle;
+  color: $menu-color;
+  border: 3px solid $menu-color;
+  opacity: 0.1;
+  padding: 18px 103px 18px 104px;
 }

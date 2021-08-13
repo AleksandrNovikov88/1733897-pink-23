@@ -2,8 +2,40 @@
 
 // Catalog
 
+
+.users-photo__title-container {
+  background-color: $blueblack;
+}
+
+.users-photo__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: $white;
+  margin: 0 auto;
+  width: 230px;
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 84px;
+}
+
 .users-photo__list {
   @include list-style;
+}
+
+.users-photo__text {
+  width: 253px;
+  margin: 0 auto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  color: $menu-color;
+  text-align: center;
+  padding: 54px 20px 60px 20px;
+}
+
+.users-photo__blockquote {
+  padding: 25px 1px 26px 17px;
 }
 
 .users-photo__panorama {
@@ -51,6 +83,7 @@
 
 .users-photo__item {
   background-color: $lightgrey;
+  margin-bottom: 20px;
 }
 
 .users-photo__likes {

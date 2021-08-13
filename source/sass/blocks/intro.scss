@@ -4,16 +4,27 @@
   background-color: $blueblack;
 }
 
-.intro__toggle {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
+.intro__wrapper {
+  width: 280px;
+  margin: auto;
+}
+
+.intro__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
   color: $white;
-  text-decoration: none;
-  border: 3px solid rgb(255, 255, 255);
-  padding: 21px 39px 21px 38px;
-  border-radius: 29px;
-  display: block;
+  margin: 0 auto;
+  width: 230px;
+  text-align: center;
+}
+
+.intro__toggle {
+  @include toggle;
+  color: $white;
+  border: 3px solid $white;
+  padding: 18px 36px 18px 35px;
+  margin-bottom: 32px;
 }
 
 .intro__text {
@@ -29,4 +40,12 @@
 
 .intro__list {
   @include list-style;
+  display: flex;
+  width: 204px;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.intro__item {
+  align-self: center;
 }

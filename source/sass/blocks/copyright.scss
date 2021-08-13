@@ -1,0 +1,16 @@
+// @import "blocks/copyright.scss";
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  margin: 0 auto;
+}
+
+.copyright__text {
+  align-self: center;
+}
+
+.copyright__link {
+  align-self: center;
+}

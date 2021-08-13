@@ -1,36 +1,47 @@
 // @import "blocks/form-styles.scss";
 
-.page-main__form-wrapper {
-  width: 280px;
-  margin: auto;
+
+.form__title-container {
+  background-color: $blueblack;
 }
 
-.username__text {
+.form__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: $white;
+  margin: 0 auto;
+  width: 230px;
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 51px;
+}
+
+.form__title-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: $menu-color;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   margin-top: 54px;
   margin-bottom: 55px;
+  width: 280px;
 }
 
-.username,
-.achievements,
-.user-contacts,
-.operating-system,
-.emotions {
+.form__group {
+  width: 280px;
   border: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
-.username__list,
-.achievements__list,
-.user-contacts__list,
-.operating-system__list {
+.form__wrapper {
+  background-color: $lightgrey;
+}
+
+.form__list {
   @include list-style;
 }
 
@@ -47,9 +58,7 @@
   padding: 23px 78px 23px 20px;
 }
 
-.achievements__text,
-.operating-system__text,
-.emotions__text {
+.form__text {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
@@ -70,7 +79,7 @@
   color: $menu-color;
 }
 
-.form-container__button {
+.form__button {
   @include button-style;
 }
 
