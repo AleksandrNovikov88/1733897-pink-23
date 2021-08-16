@@ -1,0 +1,37 @@
+// @import "blocks/modal-failure.scss";
+
+
+.modal-failure__wrapper {
+  box-shadow: 1px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal-failure__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 37px;
+  padding-top: 44px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: $black;
+}
+
+.modal-failure__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: $menu-color;
+}
+
+.modal-failure__button {
+  @include button-style;
+  margin-left: 22px;
+  margin-bottom: 52px;
+  padding: 23px 124px 23px 125px;
+  cursor: pointer;
+}

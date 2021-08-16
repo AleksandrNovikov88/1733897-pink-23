@@ -5,6 +5,10 @@
   display: none;
 }
 
+.reviews__wrapper {
+  padding-top: 50px;
+}
+
 .reviews__list {
   @include list-style;
   text-align: center;
@@ -24,10 +28,20 @@
   font-size: 14px;
   line-height: 30px;
   margin-top: 31px;
+  margin-bottom: 44px;
   color: $menu-color;
 }
 
 .reviews__item blockquote {
   margin: 0;
   padding: 0;
+}
+
+.reviews__toggles {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 60px;
 }

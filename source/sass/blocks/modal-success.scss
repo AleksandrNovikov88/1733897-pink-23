@@ -1,0 +1,41 @@
+// @import "blocks/modal-success.scss";
+
+
+.modal-success__wrapper {
+  box-shadow: 1px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal-success__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 37px;
+  padding-top: 44px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: $black;
+}
+
+.modal-success__text {
+  width: 265px;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 41px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: $menu-color;
+}
+
+.modal-success__button-wrapper {
+  background-color: $lightgrey;
+  padding: 52px 22px 52px 22px;
+}
+
+.modal-success__button {
+  @include button-style;
+  padding: 23px 65px 23px 66px;
+  cursor: pointer;
+}

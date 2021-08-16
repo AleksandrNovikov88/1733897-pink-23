@@ -4,6 +4,23 @@
   background-color: $lightgrey;
 }
 
+.table-price__wrapper {
+  padding-top: 83px;
+}
+
+.table-price__list {
+  margin-bottom: 45px;
+}
+
+.table-price__toggles {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-bottom: 55px;
+}
+
 .table-price__table-head {
   background-color: $menu-color;
 }
