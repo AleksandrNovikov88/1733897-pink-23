@@ -1,0 +1,50 @@
+// @import "blocks/table-price";
+
+.table-price {
+  background-color: $lightgrey;
+}
+
+.table-price__wrapper {
+  padding-top: 83px;
+}
+
+.table-price__list {
+  margin-bottom: 45px;
+}
+
+.table-price__toggles {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-bottom: 55px;
+}
+
+.table-price__table-head {
+  background-color: $menu-color;
+}
+
+.table-price__table-head p {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.table-price__table-head span {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.table-price__table-data {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $menu-color;
+}

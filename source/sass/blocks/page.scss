@@ -1,0 +1,17 @@
+// @import "blocks/page.scss";
+
+.page {
+  height: 100%;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.page__body {
+  width: 320px;
+  min-height: 100%;
+  margin: auto;
+  background-color: $white;
+  color: $black;
+}

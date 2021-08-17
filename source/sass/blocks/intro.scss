@@ -1,0 +1,65 @@
+// @import ("blocks/intro.scss");
+
+.intro {
+  background-color: $blueblack;
+  position: relative;
+  padding-top: 66px;
+  margin-top: -66px;
+}
+
+.intro__img {
+  z-index: 0;
+  margin-top: -66px;
+}
+
+.intro__wrapper {
+  width: 280px;
+  margin: auto;
+}
+
+.intro__title {
+  position: absolute;
+  top: 87px;
+  left: 45px;
+  width: 230px;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: $white;
+  text-align: center;
+}
+
+.intro__toggle {
+  @include toggle;
+  color: $white;
+  border: 3px solid $white;
+  padding: 18px 36px 18px 35px;
+  margin-bottom: 32px;
+  margin-top: 28px;
+}
+
+.intro__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: $white;
+  width: 280px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 38px;
+}
+
+.intro__list {
+  @include list-style;
+  display: flex;
+  width: 204px;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.intro__item {
+  align-self: center;
+}

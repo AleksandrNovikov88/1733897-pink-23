@@ -1,0 +1,57 @@
+// @import ("blocks/information.scss");
+
+
+.information__text-container {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  justify-content: space-between;
+  height: 134px;
+  margin: auto;
+  padding-top: 46px;
+  padding-bottom: 70px;
+}
+
+.information__header-text {
+  width: 280px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  color: $menu-color;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.information__item h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: $black;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.information__list-container {
+  background-color: $lightgrey;
+}
+
+.information__list {
+  @include list-style;
+  text-align: center;
+  padding-top: 53px;
+}
+
+.information__item:not(:last-child) {
+  margin-bottom: 43px;
+}
+
+.information__description {
+  margin: 0;
+  margin-bottom: 48px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: $menu-color;
+}
