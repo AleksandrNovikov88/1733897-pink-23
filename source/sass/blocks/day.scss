@@ -1,0 +1,69 @@
+// @import "blocks/day.scss";
+
+
+.day {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $lightgrey;
+  }
+}
+
+.day__wrapper {
+  display: grid;
+  grid-template-columns: 47% 53%;
+  width: 660px;
+  margin: 0 auto;
+}
+
+.day__title {
+  width: 180px;
+  margin: 0;
+  margin-top: 102px;
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+
+  @media (min-width: $desktop-width) {
+    width: 298px;
+    line-height: 30px;
+    margin-bottom: 37px;
+  }
+}
+
+.day__text {
+  width: 300px;
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $menu-color;
+
+  @media (min-width: $desktop-width) {
+    width: 534px;
+    margin-bottom: 47px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.day__link {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $pink;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.day__img {
+  margin-top: 54px;
+  margin-right: 72px;
+}

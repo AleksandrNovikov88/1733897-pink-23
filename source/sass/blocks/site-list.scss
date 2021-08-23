@@ -1,5 +1,13 @@
 // @import "blocks/site-list.scss";
 
+.site-list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+  }
+}
+
 .site-list__item a {
   text-decoration: none;
   font-weight: bold;
@@ -7,4 +15,12 @@
   line-height: 32px;
   text-transform: uppercase;
   color: $white;
+
+  @media (min-width: $desktop-width) {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: none;
+    color: $white;
+  }
 }

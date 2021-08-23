@@ -5,7 +5,7 @@
 }
 
 .table-price__wrapper {
-  padding-top: 83px;
+  padding-top: 81px;
 }
 
 .table-price__list {
@@ -23,6 +23,11 @@
 
 .table-price__table-head {
   background-color: $menu-color;
+  width: 276px;
+}
+
+.table-price__table-head:first-child {
+  background-color: $lightgrey;
 }
 
 .table-price__table-head p {
@@ -31,6 +36,10 @@
   line-height: 30px;
   text-transform: uppercase;
   color: $white;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .table-price__table-head span {
@@ -39,6 +48,10 @@
   line-height: 30px;
   text-transform: uppercase;
   color: $white;
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
 }
 
 .table-price__table-data {
@@ -47,4 +60,30 @@
   line-height: 30px;
   text-transform: uppercase;
   color: $menu-color;
+
+  @media (min-width: $tablet-width) {
+    text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+td:not(:first-child) {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.table-price__pink {
+  padding: 28px 20px 21px 20px;
+}
+
+.table-price__smile {
+  padding: 25px 175px 24px 20px;
+}
+
+.table-price__comment {
+  padding: 24px 20px 25px 20px;
 }

@@ -1,10 +1,21 @@
 // @import ("blocks/intro.scss");
 
 .intro {
+  z-index: -1;
   background-color: $blueblack;
   position: relative;
   padding-top: 66px;
   margin-top: -66px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 110px;
+    margin-top: -110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 110px;
+    margin-top: -110px;
+  }
 }
 
 .intro__img {
@@ -15,6 +26,11 @@
 .intro__wrapper {
   width: 280px;
   margin: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    margin-left: 20px;
+  }
 }
 
 .intro__title {
@@ -30,6 +46,14 @@
   line-height: 33px;
   color: $white;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 194px;
+    margin-top: 102px;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 120%;
+  }
 }
 
 .intro__toggle {
@@ -39,6 +63,10 @@
   padding: 18px 36px 18px 35px;
   margin-bottom: 32px;
   margin-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding: 18px 46px 18px 45px;
+  }
 }
 
 .intro__text {
@@ -50,6 +78,11 @@
   text-align: center;
   margin: auto;
   padding-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    width: 300px;
+  }
 }
 
 .intro__list {

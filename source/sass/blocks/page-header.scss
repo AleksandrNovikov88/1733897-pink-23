@@ -1,6 +1,13 @@
 // @import("blocks/page-header.scss");
 
 .page-header {
+  min-height: 66px;
+  z-index: 2;
+  box-sizing: border-box;
+  background-color: rgba($black, 0.3);
+}
+
+.page-header__wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -9,7 +16,17 @@
   min-height: 66px;
   z-index: 2;
   box-sizing: border-box;
-  background-color: rgba($black, 0.3);
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    height: 110px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 940px;
+    height: 110px;
+  }
 }
 
 .page-header__logo {
