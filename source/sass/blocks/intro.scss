@@ -6,21 +6,40 @@
   position: relative;
   padding-top: 66px;
   margin-top: -66px;
+  background-image: url("/img/back-mobile.png");
+  background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
     padding-top: 110px;
     margin-top: -110px;
+    background-image: url("/img/back-tablet.png");
+    background-repeat: no-repeat;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 110px;
     margin-top: -110px;
+    background-image: url("/img/back-desktop.png");
+    background-repeat: no-repeat;
   }
 }
 
 .intro__img {
   z-index: 0;
-  margin-top: -66px;
+  margin-left: -20px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 40px;
+    top: 596px;
+    z-index: 0;
+    margin-top: -110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 0;
+    margin-top: -110px;
+  }
 }
 
 .intro__wrapper {
@@ -29,18 +48,24 @@
 
   @media (min-width: $tablet-width) {
     width: 300px;
-    margin-left: 20px;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-bottom: 119px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 130px;
+    padding-bottom: 130px;
   }
 }
 
 .intro__title {
-  position: absolute;
-  top: 87px;
-  left: 45px;
+  z-index: 2;
   width: 230px;
   padding: 0;
-  margin: 0;
-  z-index: 2;
+  margin: 0 auto;
+  margin-bottom: 34px;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
@@ -54,10 +79,23 @@
     font-size: 40px;
     line-height: 120%;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 241px;
+    margin-top: 114px;
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .intro__toggle {
-  @include toggle;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+  border-radius: 29px;
+  display: inline-block;
   color: $white;
   border: 3px solid $white;
   padding: 18px 36px 18px 35px;
@@ -66,6 +104,13 @@
 
   @media (min-width: $tablet-width) {
     padding: 18px 46px 18px 45px;
+    margin: 0;
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    padding: 17px 29px 17px 28px;
   }
 }
 
@@ -80,8 +125,9 @@
   padding-bottom: 38px;
 
   @media (min-width: $tablet-width) {
-    font-size: 18px;
     width: 300px;
+    padding: 0;
+    font-size: 18px;
   }
 }
 
@@ -91,6 +137,10 @@
   width: 204px;
   justify-content: space-between;
   margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+  }
 }
 
 .intro__item {
