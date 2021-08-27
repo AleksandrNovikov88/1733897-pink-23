@@ -6,10 +6,10 @@
 
 .table-price__wrapper {
   padding-top: 81px;
+  overflow: hidden;
 }
 
 .table-price__list {
-  overflow: hidden;
   transform: translateX(-48%);
   margin-bottom: 45px;
 
@@ -30,12 +30,13 @@
 }
 
 .table-price__toggles {
-  align-items: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
   padding-bottom: 55px;
+  padding-left: 19px;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     display: none;

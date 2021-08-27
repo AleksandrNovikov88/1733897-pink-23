@@ -17,6 +17,15 @@
   width: 602px;
   margin: 0 auto;
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 193px;
+    padding-bottom: 67px;
+  }
 }
 
 .day__title {
