@@ -10,6 +10,11 @@
 
 .main-nav__wrapper {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    z-index: 2;
+  }
 }
 
 // кнопка в закрытом состоянии меню по макету
@@ -23,6 +28,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__toggle::before {
@@ -34,4 +43,8 @@
   height: 4px;
   background-color: $white;
   box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
