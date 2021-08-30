@@ -50,46 +50,45 @@
         </div>
         <p class="form__title-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
           бонусную карту!<span class="form__title-text-tablet">Пожалуйста, заполните форму ниже:</span></p>
-          <div class="form__inner-for-tablet">
-        <fieldset class="form__group form__username">
-          <ul class="form__list">
-            <li class="form__item form__item--username">
-              <label class="form__label" for="surname">Фамилия:</label>
-              <input class="form__input" type="text" name="surname" placeholder="Укажите фамилию *" id="surname"
-                required>
-            </li>
-            <li class="form__item form__item--username">
-              <label class="form__label" for="name">Имя:</label>
-              <input class="form__input" type="text" name="name" placeholder="Введите ваше имя *" id="name" required>
-            </li>
-            <li class="form__item form__item--username">
-              <label class="form__label" for="patronymic">Отчество:</label>
-              <input class="form__input" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
-            </li>
-          </ul>
-        </fieldset>
-        
-          <div class="form__wrapper form__inner-achievements">
-            <fieldset class="form__group form__achievements">
-              <legend class="form__text form__text--achievements">Ваши безбашенные достижения в путешествии</legend>
+        <div class="form__inner-for-tablet">
+          <fieldset class="form__group username">
+            <ul class="form__list username__list">
+              <li class="form__item username__item">
+                <label class="form__label" for="surname">Фамилия:</label>
+                <input class="form__input" type="text" name="surname" placeholder="Укажите фамилию *" id="surname"
+                  required>
+              </li>
+              <li class="form__item username__item">
+                <label class="form__label" for="name">Имя:</label>
+                <input class="form__input" type="text" name="name" placeholder="Введите ваше имя *" id="name" required>
+              </li>
+              <li class="form__item username__item">
+                <label class="form__label" for="patronymic">Отчество:</label>
+                <input class="form__input" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
+              </li>
+            </ul>
+          </fieldset>
+          <div class="form__wrapper achievements">
+            <fieldset class="form__group achievements__fieldset">
+              <legend class="form__text achievements__text">Ваши безбашенные достижения в путешествии</legend>
               <ul class="form__list">
-                <li class="form__item form__item--checkbox">
+                <li class="form__item achievements__item">
                   <input class="visually-hidden" type="checkbox" name="shark" id="shark" checked>
                   <label class="form__label-switch form__label-switch--checkbox" for="shark">Сделал селфи с акулой</label>
                 </li>
-                <li class="form__item form__item--checkbox">
+                <li class="form__item achievements__item">
                   <input class="visually-hidden" type="checkbox" name="beach" id="beach" checked>
                   <label class="form__label-switch form__label-switch--checkbox" for="beach">Обгорел на пляже</label>
                 </li>
-                <li class="form__item form__item--checkbox">
+                <li class="form__item achievements__item">
                   <input class="visually-hidden" type="checkbox" name="chuck" id="chuck">
                   <label class="form__label-switch form__label-switch--checkbox" for="chuck">Видел Чака Норриса</label>
                 </li>
-                <li class="form__item form__item--checkbox">
+                <li class="form__item achievements__item">
                   <input class="visually-hidden" type="checkbox" name="souvenirs" id="souvenirs">
                   <label class="form__label-switch form__label-switch--checkbox" for="souvenirs">Накупил сувениров</label>
                 </li>
-                <li class="form__item form__item--checkbox">
+                <li class="form__item achievements__item">
                   <input class="visually-hidden" type="checkbox" name="tower" id="tower" checked>
                   <label class="form__label-switch form__label-switch--checkbox" for="tower">Удержал башню</label>
                 </li>
@@ -134,7 +133,7 @@
               </ul>
             </fieldset>
           </div>
-      </div>
+        </div>
         <fieldset class="form__group form__emotions">
           <legend class="form__text form__text--emotions">Опишите свои эмоции</legend>
           <label class="visually-hidden" for="description">Описание эмоций</label>

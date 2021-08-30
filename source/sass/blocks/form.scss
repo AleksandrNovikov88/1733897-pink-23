@@ -1,4 +1,4 @@
-// @import "blocks/form-styles.scss";
+// @import "blocks/form.scss";
 
 
 .form__title-container {
@@ -116,16 +116,6 @@
   }
 }
 
-.form__username {
-  border: none;
-
-  @media (min-width: $desktop-width) {
-    width: 435px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-}
-
 .form__wrapper {
   padding-top: 42px;
   margin-bottom: 55px;
@@ -146,12 +136,6 @@
   }
 }
 
-.form__inner-achievements {
-  @media (min-width: $tablet-width) {
-    order: 3;
-  }
-}
-
 .form__list {
   @include list-style;
 
@@ -167,12 +151,6 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
-  }
-}
-
-.form__item--username {
-  @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
   }
 }
 
@@ -237,28 +215,6 @@
   }
 }
 
-.form__achievements {
-  @media (min-width: $tablet-width) {
-    padding-bottom: 61px;
-  }
-}
-
-.form__text--achievements {
-  margin-bottom: 55px;
-  width: 252px;
-
-  @media (min-width: $tablet-width) {
-    width: 436px;
-  }
-}
-
-.form__contacts {
-  @media (min-width: $tablet-width) {
-    padding-bottom: 37px;
-    order: 2;
-  }
-}
-
 .form__text--contacts {
   @media (max-width: $mobile-width-only) {
     display: none;
@@ -314,10 +270,6 @@
   @media (min-width: $tablet-width) {
     width: 260px;
   }
-}
-
-.form__item--checkbox {
-  margin-bottom: 69px;
 }
 
 .form__item--radio {
