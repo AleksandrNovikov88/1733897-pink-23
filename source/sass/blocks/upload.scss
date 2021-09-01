@@ -29,9 +29,13 @@
 .upload__wrapper {
   background-color: $lightgrey;
 
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: $desktop-width) {
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
+/*  @media (min-width: $tablet-width) {
     padding-top: 57px;
     padding-bottom: 54px;
   }
@@ -41,32 +45,53 @@
     margin: 0 auto;
     padding-bottom: 57px;
   }
-}
-
-.upload__picture {
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 42px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0;
-    margin-left: 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 80px;
-  }
-}
+} */
 
 .upload__form {
   width: 280px;
-  margin: auto;
+  margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 41px;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
+    width: 620px;
     padding: 0;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    padding-bottom: 57px;
+  }
+}
+
+.upload__center {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 620px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+  }
+}
+
+.upload-inner {
+  @media (min-width: $desktop-width) {
+    width: 410px;
+  }
+}
+
+.upload__picture {
+  margin-bottom: 42px;
+
+  @media (min-width: $desktop-width) {
+    width: 300px;
+    margin-bottom: 0;
   }
 }
 
@@ -87,6 +112,10 @@
     padding: 0;
     margin-bottom: 95px;
     height: 162px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 105px;
   }
 }
 
@@ -112,7 +141,7 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 55px;
+    top: 45px;
     left: 73px;
   }
 }
@@ -139,6 +168,10 @@
   @media (min-width: $tablet-width) {
     width: 202px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 288px;
+  }
 }
 
 .upload__toggle {
@@ -154,11 +187,28 @@
   cursor: pointer;
 }
 
+.upload__toggle--fill-controls {
+  @media (min-width: $tablet-width) {
+    right: 148px;
+  }
+}
+
+.upload__toggle--saturation-controls {
+  @media (min-width: $tablet-width) {
+    right: 87px;
+  }
+}
+
 .upload__buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 135px;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
 }
 
 .upload__post-it {
@@ -166,6 +216,12 @@
   color: $pink;
   border: 3px solid $pink;
   padding: 18px 90px 18px 91px;
+
+  @media (min-width: $desktop-width) {
+    width: 183px;
+    height: 55px;
+    padding: 15px 40px 18px 40px;
+  }
 }
 
 .upload__cancel {
@@ -174,4 +230,10 @@
   border: 3px solid $menu-color;
   opacity: 0.1;
   padding: 18px 103px 18px 104px;
+
+  @media (min-width: $desktop-width) {
+    width: 183px;
+    height: 55px;
+    padding: 15px 40px 18px 40px;
+  }
 }

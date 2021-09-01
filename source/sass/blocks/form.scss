@@ -68,18 +68,6 @@
   }
 }
 
-.form__inner-for-tablet {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (min-width: $desktop-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
 .form__title-text-tablet {
   @media (max-width: $mobile-width-only) {
     display: none;
@@ -93,6 +81,8 @@
     color: $menu-color;
   }
 }
+
+// Общие стили формы
 
 .form__group {
   width: 280px;
@@ -110,29 +100,21 @@
     margin-bottom: 70px;
     border: 2px solid $grey;
   }
+}
+
+.form__inner-for-tablet {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 
   @media (min-width: $desktop-width) {
-    width: 940px;
-  }
-}
-
-.form__wrapper {
-  padding-top: 42px;
-  margin-bottom: 55px;
-
-  @media (max-width: $mobile-width-only) {
-    background-color: $lightgrey;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 936px;
     margin: 0 auto;
-  }
-}
-
-.form__inner-application {
-  @media (min-width: $tablet-width) {
-    order: 1;
+    padding-left: 132px;
+    padding-right: 132px;
   }
 }
 
@@ -179,23 +161,7 @@
   }
 }
 
-.form__description {
-  padding: 22px 21px 132px 20px;
-
-  @media (min-width: $tablet-width) {
-    padding: 22px 21px 132px 20px;
-  }
-}
-
 .form__input::placeholder {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 30px;
-  color: $menu-color;
-}
-
-.form__description::placeholder {
-  align-items: center;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
@@ -215,35 +181,81 @@
   }
 }
 
-.form__text--contacts {
+// Для блоков с достижениями и приложениями
+
+
+.form__wrapper {
+  padding-top: 42px;
+  margin-bottom: 55px;
+
   @media (max-width: $mobile-width-only) {
-    display: none;
+    background-color: $lightgrey;
   }
 
-
   @media (min-width: $tablet-width) {
-    width: 260px;
+    padding: 0;
+    margin: 0 auto;
   }
 }
 
-.form__contacts-container {
+.form__label-switch {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: $menu-color;
+}
+
+
+// Стили ФИО
+
+
+.form__group--username {
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    order: 1;
+    border: none;
   }
 
   @media (min-width: $desktop-width) {
-    flex-wrap: nowrap;
+    width: 431px;
+    margin: 0;
+    margin-right: 74px;
   }
 }
 
-.form__application {
+.form__list--username {
+  @media (min-width: $desktop-width) {
+    width: 431px;
+  }
+}
+
+.form__item--username {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+
+// Для блока с выбором приложения
+
+
+.form__wrapper--application {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 431px;
+    margin: 0;
+  }
+}
+
+.form__group--application {
   @media (min-width: $tablet-width) {
     padding-bottom: 66px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 435px;
+    width: 431px;
   }
 }
 
@@ -255,12 +267,143 @@
   }
 }
 
-.form__emotions {
+.form__list--application {
+  @media (min-width: $desktop-width) {
+    width: 431px;
+  }
+}
+
+.form__item--radio {
+  margin-bottom: 62px;
+}
+
+//  Для блока контактная информация
+
+
+.form__group--form-contacts {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 37px;
+    order: 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 69px;
+  }
+}
+
+.form__text--contacts {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+  }
+}
+
+.form__list--container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+  }
+}
+
+
+// Блок достижения
+
+
+.form__wrapper--achievements {
+  @media (min-width: $tablet-width) {
+    order: 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.form__group--achievements {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.form__text--achievements {
+  margin-bottom: 55px;
+  width: 252px;
+
+  @media (min-width: $tablet-width) {
+    width: 436px;
+  }
+}
+
+.form__list--achievements {
+  @media (min-width: $desktop-width) {
+    width: 816px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form__item--achievements {
+  margin-bottom: 69px;
+
+  @media (min-width: $desktop-width) {
+    width: 33%;
+  }
+}
+
+.form__item--achievements:nth-child(1) {
+  order: 1;
+}
+
+.form__item--achievements:nth-child(2) {
+  order: 4;
+}
+
+.form__item--achievements:nth-child(3) {
+  order: 2;
+}
+
+.form__item--achievements:nth-child(4) {
+  order: 5;
+}
+
+.form__item--achievements:nth-child(5) {
+  order: 3;
+}
+
+.form__item--achievements:nth-child(6) {
+  order: 6;
+}
+
+
+// Стили для блока с описанием эмоций
+
+
+.form__group--emotions {
+  order: 5;
   padding-bottom: 53px;
   margin-bottom: 52px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
@@ -272,16 +415,25 @@
   }
 }
 
-.form__item--radio {
-  margin-bottom: 62px;
+.form__emotions {
+  padding: 22px 21px 132px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 21px 132px 20px;
+  }
 }
 
-.form__label-switch {
+.form__description::placeholder {
+  align-items: center;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
   color: $menu-color;
 }
+
+
+// Кнопка отправки формы, обязательные поля
+
 
 .form__button {
   @include button-style;
@@ -315,7 +467,7 @@
   color: $pink;
 }
 
-.form__rtx {
+.form__group--button {
   @media (min-width: $tablet-width) {
     width: 620px;
     display: flex;
