@@ -1,8 +1,13 @@
 // @import "blocks/modal-success.scss";
 
 
-.modal-success__wrapper {
+.modal-success {
   box-shadow: 1px 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    margin: 0 auto;
+  }
 }
 
 .modal-success__title {
@@ -15,6 +20,14 @@
   line-height: 24px;
   text-align: center;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+    margin: 0 auto;
+    margin-bottom: 37px;
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .modal-success__text {
@@ -27,15 +40,30 @@
   line-height: 24px;
   text-align: center;
   color: $menu-color;
+
+  @media (min-width: $tablet-width) {
+    width: 342px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
 }
 
 .modal-success__button-wrapper {
   background-color: $lightgrey;
   padding: 52px 22px 52px 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 52px 82px 52px 83px;
+  }
 }
 
 .modal-success__button {
   @include button-style;
   padding: 23px 65px 23px 66px;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 75px 23px 75px;
+  }
 }

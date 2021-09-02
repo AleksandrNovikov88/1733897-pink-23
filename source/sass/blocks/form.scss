@@ -1,56 +1,139 @@
-// @import "blocks/form-styles.scss";
+// @import "blocks/form.scss";
 
 
 .form__title-container {
+  z-index: -1;
+  position: relative;
+  padding-top: 66px;
+  margin-top: -66px;
+  background-image: url("../img/back-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
   background-color: $blueblack;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 110px;
+    margin-top: -110px;
+    background-image: url("../img/back-tablet.png");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 110px;
+    margin-top: -110px;
+    background-image: url("../img/back-desktop.png");
+    background-repeat: no-repeat;
+  }
 }
 
 .form__title {
+  width: 230px;
+  margin: 0 auto;
+  padding-top: 36px;
+  padding-bottom: 51px;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
-  color: $white;
-  margin: 0 auto;
-  width: 230px;
   text-align: center;
-  padding-top: 36px;
-  padding-bottom: 51px;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    font-size: 50px;
+    line-height: 68px;
+    padding-top: 70px;
+    padding-bottom: 58px;
+  }
 }
 
 .form__title-text {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 54px;
+  margin-bottom: 55px;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: $menu-color;
-  margin: 0 auto;
-  padding: 0;
-  margin-top: 54px;
-  margin-bottom: 55px;
-  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 490px;
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 756px;
+  }
 }
+
+.form__title-text-tablet {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: $menu-color;
+  }
+}
+
+// Общие стили формы
 
 .form__group {
   width: 280px;
   padding: 0;
   margin: 0 auto;
   padding-bottom: 44px;
-  border: none;
+
+  @media (max-width: $mobile-width-only) {
+    border: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    padding: 0;
+    margin-bottom: 70px;
+    border: 2px solid $grey;
+  }
 }
 
-.form__group--emotions {
-  padding-bottom: 0;
-  margin-bottom: 52px;
-}
+.form__inner-for-tablet {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 
-.form__wrapper {
-  padding-top: 42px;
-  margin-bottom: 55px;
-  background-color: $lightgrey;
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 936px;
+    margin: 0 auto;
+    padding-left: 132px;
+    padding-right: 132px;
+  }
 }
 
 .form__list {
   @include list-style;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+  }
+}
+
+.form__item {
+  @media (min-width: $tablet-width) {
+    margin-left: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .form__label {
@@ -60,25 +143,25 @@
   line-height: 30px;
   color: $pink;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+  }
 }
 
 .form__input {
   padding: 23px 89px 23px 20px;
-}
 
-.form__description {
-  padding: 22px 21px 132px 20px;
+  @media (min-width: $tablet-width) {
+    padding: 23px 310px 23px 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 178px 23px 20px;
+  }
 }
 
 .form__input::placeholder {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 30px;
-  color: $menu-color;
-}
-
-.form__description::placeholder {
-  align-items: center;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
@@ -92,27 +175,27 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $pink;
+
+  @media (min-width: $tablet-width) {
+    line-height: 30px;
+  }
 }
 
-.form__text--achievements {
+// Для блоков с достижениями и приложениями
+
+
+.form__wrapper {
+  padding-top: 42px;
   margin-bottom: 55px;
-  width: 252px;
-}
 
-.form__text--application {
-  margin-bottom: 52px;
-}
+  @media (max-width: $mobile-width-only) {
+    background-color: $lightgrey;
+  }
 
-.form__text--emotions {
-  margin-bottom: 22px;
-}
-
-.form__item--checkbox {
-  margin-bottom: 69px;
-}
-
-.form__item--radio {
-  margin-bottom: 62px;
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 
 .form__label-switch {
@@ -122,26 +205,278 @@
   color: $menu-color;
 }
 
+
+// Стили ФИО
+
+
+.form__group--username {
+  @media (min-width: $tablet-width) {
+    order: 1;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 431px;
+    margin: 0;
+    margin-right: 74px;
+  }
+}
+
+.form__list--username {
+  @media (min-width: $desktop-width) {
+    width: 431px;
+  }
+}
+
+.form__item--username {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+
+// Для блока с выбором приложения
+
+
+.form__wrapper--application {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 431px;
+    margin: 0;
+  }
+}
+
+.form__group--application {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 431px;
+  }
+}
+
+.form__text--application {
+  margin-bottom: 52px;
+
+  @media (min-width: $tablet-width) {
+    width: 368px;
+  }
+}
+
+.form__list--application {
+  @media (min-width: $desktop-width) {
+    width: 431px;
+  }
+}
+
+.form__item--radio {
+  margin-bottom: 62px;
+}
+
+//  Для блока контактная информация
+
+
+.form__group--form-contacts {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 37px;
+    order: 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 69px;
+  }
+}
+
+.form__text--contacts {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+  }
+}
+
+.form__list--container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+  }
+}
+
+
+// Блок достижения
+
+
+.form__wrapper--achievements {
+  @media (min-width: $tablet-width) {
+    order: 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.form__group--achievements {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.form__text--achievements {
+  margin-bottom: 55px;
+  width: 252px;
+
+  @media (min-width: $tablet-width) {
+    width: 436px;
+  }
+}
+
+.form__list--achievements {
+  @media (min-width: $desktop-width) {
+    width: 816px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form__item--achievements {
+  margin-bottom: 69px;
+
+  @media (min-width: $desktop-width) {
+    width: 33%;
+  }
+}
+
+.form__item--achievements:nth-child(1) {
+  order: 1;
+}
+
+.form__item--achievements:nth-child(2) {
+  order: 4;
+}
+
+.form__item--achievements:nth-child(3) {
+  order: 2;
+}
+
+.form__item--achievements:nth-child(4) {
+  order: 5;
+}
+
+.form__item--achievements:nth-child(5) {
+  order: 3;
+}
+
+.form__item--achievements:nth-child(6) {
+  order: 6;
+}
+
+
+// Стили для блока с описанием эмоций
+
+
+.form__group--emotions {
+  order: 5;
+  padding-bottom: 53px;
+  margin-bottom: 52px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.form__text--emotions {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+  }
+}
+
+.form__emotions {
+  padding: 22px 21px 132px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 21px 132px 20px;
+  }
+}
+
+.form__description::placeholder {
+  align-items: center;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: $menu-color;
+}
+
+
+// Кнопка отправки формы, обязательные поля
+
+
 .form__button {
   @include button-style;
-  margin-left: 26px;
   margin-bottom: 46px;
   padding: 23px 45px 23px 45px;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .form__required-fields {
   margin: 0;
   padding: 0;
   margin-bottom: 26px;
-  margin-left: 73px;
+  margin-left: 45px;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
   color: $menu-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    align-self: center;
+  }
 }
 
 .form__required-fields span {
   color: $pink;
+}
+
+.form__group--button {
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 940px;
+  }
 }
