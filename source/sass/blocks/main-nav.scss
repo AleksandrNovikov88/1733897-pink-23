@@ -9,7 +9,16 @@
 // меню в закрытом состоянии
 
 .main-nav__wrapper {
-  display: none;
+  width: 280px;
+  left: 0;
+  right: 0;
+  top: 66px;
+  text-align: center;
+  background-color: $menu-color;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+  }
 
   @media (min-width: $desktop-width) {
     display: inline;
