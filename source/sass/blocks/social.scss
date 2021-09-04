@@ -8,3 +8,26 @@
   justify-content: space-between;
   width: 177px;
 }
+
+// Стайлгайд
+
+.social__link--twitter:hover circle,
+.social__link--twitter:focus circle,
+.social__link--facebook:hover circle,
+.social__link--facebook:focus circle,
+.social__link--youtube:hover circle,
+.social__link--youtube:focus circle {
+  opacity: 1;
+}
+
+.social__link--twitter:active path,
+.social__link--facebook:active path,
+.social__link--youtube:active path {
+  opacity: 0.3;
+}
+
+.social__link--twitter:active circle,
+.social__link--facebook:active circle,
+.social__link--youtube:active circle {
+  opacity: 0.1;
+}

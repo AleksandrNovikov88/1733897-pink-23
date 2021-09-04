@@ -4,7 +4,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
-    width: 620px;
+    //width: 620px;
   }
 }
 
@@ -16,6 +16,15 @@
   text-transform: uppercase;
   color: $white;
 
+  &:hover,
+  &:focus {
+    color: $pink;
+  }
+
+  &:active {
+    color: rgba($pink, 0.3);
+  }
+
   @media (min-width: $desktop-width) {
     font-weight: normal;
     font-size: 18px;
@@ -26,5 +35,24 @@
 }
 
 .site-list__item {
-  padding: 5px 77px 10px 56px;
+  position: relative;
+  padding: 25px 0 25px 0;
+
+
+  @media (max-width: $tablet-width) {
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $black;
+  }
+}
+
+.site-list__item--active::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $white;
+  }
 }

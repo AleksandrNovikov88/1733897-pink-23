@@ -28,3 +28,23 @@
   border: 3px solid $menu-color;
   opacity: 1;
 }
+
+// Стайлгайд
+
+.slider__toggle:hover,
+.slider__toggle:focus {
+  opacity: 0.6;
+}
+
+.slider__toggle:active {
+  opacity: 0.1;
+}
+
+.slider__toggle--current:hover,
+.slider__toggle--current:focus {
+  opacity: 1;
+}
+
+.slider__toggle--current:active {
+  opacity: 1;
+}

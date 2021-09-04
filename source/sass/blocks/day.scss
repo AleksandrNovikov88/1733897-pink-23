@@ -23,6 +23,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: 41% 59%;
+    width: 899px;
     margin-bottom: 193px;
     padding-bottom: 67px;
   }
@@ -76,4 +78,9 @@
 .day__img {
   margin-top: 54px;
   margin-right: 72px;
+
+  @media (min-width: $desktop-width) {
+    width: 298px;
+    height: 345px;
+  }
 }

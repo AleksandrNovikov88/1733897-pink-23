@@ -57,25 +57,27 @@
   }
 }
 
-.table-price__table-head:nth-child(3)::before {
+.table-price__hit::before {
   content: "";
   position: absolute;
   left: -3px;
   top: 0;
   width: 74px;
   height: 74px;
-  background-image: url("../img/hit.png");
+  background-image: url("../img/hit.svg");
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
     left: 0;
     width: 61px;
     height: 61px;
+    background-image: url("../img/hit-tablet.svg");
   }
 
   @media (min-width: $desktop-width) {
     width: 74px;
     height: 74px;
+    background-image: url("../img/hit.svg");
   }
 }
 
@@ -142,7 +144,7 @@
   padding: 28px 20px 21px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 10px 63px;
+    padding: 10px 53px;
   }
 
   @media (min-width: $desktop-width) {
@@ -188,12 +190,12 @@
   top: 30px;
   width: 31px;
   height: 21px;
-  background-image: url("../img/yes.png");
+  background-image: url("../img/yes.svg");
   z-index: 2;
 
   @media (min-width: $tablet-width) {
     left: 274px;
-    top: 30px;
+    top: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -209,7 +211,7 @@
   top: 30px;
   width: 27px;
   height: 27px;
-  background-image: url("../img/no.png");
+  background-image: url("../img/no.svg");
   background-repeat: no-repeat;
   z-index: 2;
 
@@ -231,7 +233,7 @@
   top: 30px;
   width: 27px;
   height: 27px;
-  background-image: url("../img/no.png");
+  background-image: url("../img/no.svg");
   background-repeat: no-repeat;
   z-index: 2;
 
@@ -255,12 +257,12 @@
   top: 30px;
   width: 31px;
   height: 21px;
-  background-image: url("../img/yes.png");
+  background-image: url("../img/yes.svg");
   z-index: 2;
 
   @media (min-width: $tablet-width) {
     left: 183px;
-    top: 30px;
+    top: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -276,7 +278,7 @@
   top: 30px;
   width: 27px;
   height: 27px;
-  background-image: url("../img/no.png");
+  background-image: url("../img/no.svg");
   background-repeat: no-repeat;
   z-index: 2;
 
@@ -298,7 +300,7 @@
   top: 30px;
   width: 27px;
   height: 27px;
-  background-image: url("../img/no.png");
+  background-image: url("../img/no.svg");
   background-repeat: no-repeat;
   z-index: 2;
 
@@ -322,12 +324,12 @@
   top: 30px;
   width: 31px;
   height: 21px;
-  background-image: url("../img/yes.png");
+  background-image: url("../img/yes.svg");
   z-index: 2;
 
   @media (min-width: $tablet-width) {
     left: 183px;
-    top: 30px;
+    top: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -343,7 +345,7 @@
   top: 30px;
   width: 31px;
   height: 21px;
-  background-image: url("../img/yes.png");
+  background-image: url("../img/yes.svg");
   z-index: 2;
 
   @media (min-width: $tablet-width) {
@@ -364,7 +366,7 @@
   top: 30px;
   width: 27px;
   height: 27px;
-  background-image: url("../img/no.png");
+  background-image: url("../img/no.svg");
   background-repeat: no-repeat;
   z-index: 2;
 

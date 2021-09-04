@@ -38,3 +38,13 @@
     margin-top: 10px;
   }
 }
+
+.copyright__link:hover path,
+.copyright__link:focus path {
+  fill: $menu-color;
+}
+
+.copyright__link:active path {
+  fill: $menu-color;
+  opacity: 0.3;
+}

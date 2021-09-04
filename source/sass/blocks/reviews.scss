@@ -11,6 +11,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
 .reviews__list {
@@ -21,6 +25,60 @@
     width: 620px;
   }
 }
+
+// Кавычки
+
+.reviews__wrapper::before {
+  content: "";
+  position: absolute;
+  left: 678px;
+  top: -153px;
+  width: 79px;
+  height: 63px;
+  background-image: url("../img/quotes.png");
+}
+
+// Стрелки
+
+.reviews__left-arrow {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    position: absolute;
+    left: 250px;
+    top: 10px;
+    border: none;
+    background: transparent;
+  }
+}
+
+.reviews__right-arrow {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    position: absolute;
+    left: 1143px;
+    top: 10px;
+    border: none;
+    background: transparent;
+  }
+}
+
+.reviews__left-arrow:hover path,
+.reviews__left-arrow:focus path,
+.reviews__right-arrow:hover path,
+.reviews__right-arrow:focus path {
+  opacity: 0.6;
+}
+
+.reviews__left-arrow:active path,
+.reviews__right-arrow:active path {
+  opacity: 0.1;
+}
+
+// Другие стили
 
 .reviews__blockquote {
   display: flex;

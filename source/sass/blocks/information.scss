@@ -66,6 +66,7 @@
 }
 
 .information__list-container {
+  padding-bottom: 49px;
   background-color: $lightgrey;
 }
 
@@ -141,5 +142,68 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 47px;
+  }
+}
+
+// Изображения айфонов
+
+.information__iphone-mood {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.information__iphone-world {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.information__item:nth-child(3) {
+  position: relative;
+}
+
+.information__iphone {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 370px;
+    top: -400px;
+    width: 268px;
+    height: 547px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    width: 186px;
+    height: 382px;
+  }
+}
+
+.information__item {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.information__item div {
+  @media (min-width: $desktop-width) {
+    order: 2;
+  }
+}
+
+.information__item img {
+  @media (min-width: $desktop-width) {
+    order: 1;
+    align-self: center;
+    margin-bottom: 59px;
   }
 }

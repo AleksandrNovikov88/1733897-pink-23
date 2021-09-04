@@ -119,6 +119,12 @@
   margin-bottom: 32px;
   margin-top: 28px;
 
+  &:hover,
+  &:focus {
+    color: $pink;
+    background-color: $white;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 18px 46px 18px 45px;
     margin: 0;

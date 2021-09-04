@@ -1,7 +1,22 @@
 // @import "blocks/page-footer.scss";
 
-.page-footer__wrapper {
+
+.page-footer {
   padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
+}
+
+.page-footer__wrapper {
   display: flex;
   flex-direction: column;
 
@@ -16,7 +31,6 @@
   @media (min-width: $desktop-width) {
     width: 940px;
     margin: auto;
-    padding-top: 102px;
   }
 }
 
@@ -24,10 +38,13 @@
   align-self: center;
   margin-bottom: 41px;
 
+
   @media (min-width: $tablet-width) {
-    margin-left: 20px;
+    margin: 0;
+    align-self: stretch;
   }
 }
+
 
 .page-footer__social {
   margin-bottom: 41px;
@@ -35,4 +52,23 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+}
+
+// Стайлгайд
+
+.page-footer__logo:hover path,
+.page-footer__logo:focus path {
+  fill: $pink;
+}
+
+.page-footer__logo:active path:nth-child(1),
+.page-footer__logo:active path:nth-child(2),
+.page-footer__logo:active path:nth-child(3),
+.page-footer__logo:active path:nth-child(4) {
+  opacity: 0.3;
+  fill: $menu-color;
+}
+
+.page-footer__logo:active path:nth-child(5) {
+  opacity: 0.3;
 }
