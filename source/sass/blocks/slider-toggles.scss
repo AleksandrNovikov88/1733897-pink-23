@@ -10,7 +10,7 @@
   margin-bottom: 60px;
 }
 
-.slider__toggle {
+.slider-toggles__toggle {
   padding: 0;
   background-color: $menu-color;
   opacity: 0.3;
@@ -26,5 +26,25 @@
   height: 12px;
   background-color: $white;
   border: 3px solid $menu-color;
+  opacity: 1;
+}
+
+// Стайлгайд
+
+.slider-toggles__toggle:hover,
+.slider-toggles__toggle:focus {
+  opacity: 0.6;
+}
+
+.slider-toggles__toggle:active {
+  opacity: 0.1;
+}
+
+.slider__toggle--current:hover,
+.slider__toggle--current:focus {
+  opacity: 1;
+}
+
+.slider__toggle--current:active {
   opacity: 1;
 }

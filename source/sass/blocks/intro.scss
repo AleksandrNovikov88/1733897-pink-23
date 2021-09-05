@@ -15,6 +15,8 @@
     margin-top: -110px;
     background-image: url("../img/back-tablet.png");
     background-repeat: no-repeat;
+    background-position: 50% -3px;
+    background-size: cover;
   }
 
   @media (min-width: $desktop-width) {
@@ -116,6 +118,12 @@
   padding: 18px 36px 18px 35px;
   margin-bottom: 32px;
   margin-top: 28px;
+
+  &:hover,
+  &:focus {
+    color: $pink;
+    background-color: $white;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 18px 46px 18px 45px;
