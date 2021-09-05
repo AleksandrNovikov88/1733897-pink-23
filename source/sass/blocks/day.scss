@@ -12,6 +12,7 @@
 }
 
 .day__wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 47% 53%;
   width: 602px;
@@ -75,9 +76,16 @@
   }
 }
 
-.day__img {
-  margin-top: 54px;
-  margin-right: 72px;
+.day__img::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 25px;
+  width: 238px;
+  height: 276px;
+  background-image: url("../img/day.svg");
+  background-repeat: no-repeat;
+
 
   @media (min-width: $desktop-width) {
     width: 298px;

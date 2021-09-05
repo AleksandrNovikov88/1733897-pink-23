@@ -14,6 +14,8 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
+    width: 1200px;
+    margin: auto;
   }
 }
 
@@ -31,11 +33,12 @@
 .reviews__wrapper::before {
   content: "";
   position: absolute;
-  left: 678px;
+  left: 50%;
+  transform: translateX(-50%);
   top: -153px;
   width: 79px;
   height: 63px;
-  background-image: url("../img/quotes.png");
+  background-image: url("../img/quotes.svg");
 }
 
 // Стрелки
@@ -46,8 +49,8 @@
   @media (min-width: $desktop-width) {
     display: inline-block;
     position: absolute;
-    left: 250px;
-    top: 10px;
+    left: 163px;
+    top: 27px;
     border: none;
     background: transparent;
   }
@@ -59,8 +62,8 @@
   @media (min-width: $desktop-width) {
     display: inline-block;
     position: absolute;
-    left: 1143px;
-    top: 10px;
+    left: 1020px;
+    top: 22px;
     border: none;
     background: transparent;
   }

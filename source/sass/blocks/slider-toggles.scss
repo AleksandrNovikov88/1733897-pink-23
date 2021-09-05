@@ -10,7 +10,7 @@
   margin-bottom: 60px;
 }
 
-.slider__toggle {
+.slider-toggles__toggle {
   padding: 0;
   background-color: $menu-color;
   opacity: 0.3;
@@ -31,12 +31,12 @@
 
 // Стайлгайд
 
-.slider__toggle:hover,
-.slider__toggle:focus {
+.slider-toggles__toggle:hover,
+.slider-toggles__toggle:focus {
   opacity: 0.6;
 }
 
-.slider__toggle:active {
+.slider-toggles__toggle:active {
   opacity: 0.1;
 }
 

@@ -4,7 +4,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
-    //width: 620px;
+    flex-wrap: wrap;
   }
 }
 
@@ -39,9 +39,12 @@
   padding: 25px 0 25px 0;
 
 
-  @media (max-width: $tablet-width) {
-    border-top: 1px solid $grey;
-    border-bottom: 1px solid $black;
+  /*  @media (max-width: $tablet-width) {
+    box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }*/
+
+  @media (max-width: $desktop-width) {
+    box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
 }
 

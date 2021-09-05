@@ -57,7 +57,7 @@
   }
 }
 
-.table-price__hit::before {
+.table-price__table-head--hit::before {
   content: "";
   position: absolute;
   left: -3px;
@@ -148,7 +148,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 16px 103px;
+    padding: 16px 90px;
   }
 }
 
@@ -200,7 +200,7 @@
 
   @media (min-width: $desktop-width) {
     left: 417px;
-    top: 30px;
+    top: 20px;
   }
 }
 
@@ -267,7 +267,7 @@
 
   @media (min-width: $desktop-width) {
     left: 296px;
-    top: 30px;
+    top: 20px;
   }
 }
 
@@ -334,7 +334,7 @@
 
   @media (min-width: $desktop-width) {
     left: 300px;
-    top: 30px;
+    top: 20px;
   }
 }
 

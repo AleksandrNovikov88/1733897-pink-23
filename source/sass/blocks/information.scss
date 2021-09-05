@@ -148,20 +148,12 @@
 // Изображения айфонов
 
 .information__iphone-mood {
-  @media (max-width: $mobile-width-only) {
-    display: none;
-  }
-
   @media (max-width: $tablet-width-only) {
     display: none;
   }
 }
 
 .information__iphone-world {
-  @media (max-width: $mobile-width-only) {
-    display: none;
-  }
-
   @media (max-width: $tablet-width-only) {
     display: none;
   }
