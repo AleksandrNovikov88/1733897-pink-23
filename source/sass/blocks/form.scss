@@ -80,6 +80,10 @@
     text-align: center;
     color: $menu-color;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 5px;
+  }
 }
 
 // Общие стили формы
@@ -151,13 +155,11 @@
 
 .form__input {
   padding: 23px 89px 23px 20px;
+  border: 2px solid $grey;
+  border-radius: 1px;
 
   @media (min-width: $tablet-width) {
-    padding: 23px 310px 23px 20px;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 23px 178px 23px 20px;
+    padding: 23px 246px 16px 20px;
   }
 }
 
@@ -199,10 +201,65 @@
 }
 
 .form__label-switch {
+  position: relative;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
   color: $menu-color;
+  margin-left: 79px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 70px;
+  }
+}
+
+// Псевдоэлементы чекбокса достижений
+
+
+.form__input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -57px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/form/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+
+.form__input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -57px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/form/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+// Псевдоэлементы радио-кнопок
+
+.form__input-radio:checked + label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -57px;
+  width: 42px;
+  height: 42px;
+  background-image: url("../img/form/radio-on.svg");
+  background-repeat: no-repeat;
+}
+
+.form__input-radio + label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -57px;
+  width: 42px;
+  height: 42px;
+  background-image: url("../img/form/radio-off.svg");
+  background-repeat: no-repeat;
 }
 
 
@@ -229,8 +286,42 @@
 }
 
 .form__item--username {
+  margin-bottom: 29px;
+
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 56px;
+    margin-left: 0;
+  }
+}
+
+.form__input--name {
+  @media (min-width: $tablet-width) {
+    padding-right: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 163px;
+  }
+}
+
+.form__input--family {
+  @media (min-width: $tablet-width) {
+    padding-right: 310px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 122px;
+  }
+}
+
+.form__input--patronymic {
+  @media (min-width: $tablet-width) {
+    padding-right: 310px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 122px;
   }
 }
 
@@ -246,6 +337,7 @@
   @media (min-width: $desktop-width) {
     width: 431px;
     margin: 0;
+    margin-top: -15px;
   }
 }
 
@@ -282,8 +374,9 @@
 
 .form__group--form-contacts {
   @media (min-width: $tablet-width) {
-    padding-bottom: 37px;
     order: 3;
+    padding-top: 41px;
+    padding-bottom: 37px;
   }
 
   @media (min-width: $desktop-width) {
@@ -312,6 +405,77 @@
 
   @media (min-width: $desktop-width) {
     flex-wrap: nowrap;
+    width: 816px;
+    justify-content: space-between;
+  }
+}
+
+.form__item--contacts {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.form__label--contacts {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}
+
+.form__label--contacts:first-child {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 41px;
+  }
+}
+
+.form__input--contacts {
+  @media (min-width: $tablet-width) {
+    order: 1;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 178px 16px 20px;
+  }
+}
+
+.form__list--container .form__item:nth-child(1)::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 433px;
+    width: 59px;
+    height: 59px;
+    background-image: url("../img/form/phone-icon.svg");
+  }
+
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 306px;
+    width: 59px;
+    height: 59px;
+    background-image: url("../img/form/phone-icon.svg");
+  }
+}
+
+.form__list--container .form__item:nth-child(2)::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 433px;
+    width: 59px;
+    height: 59px;
+    background-image: url("../img/form/mail-icon.svg");
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 306px;
   }
 }
 
@@ -395,11 +559,12 @@
 
 .form__group--emotions {
   order: 5;
-  padding-bottom: 53px;
-  margin-bottom: 52px;
+  padding-bottom: 52px;
+  //margin-bottom: 52px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -417,18 +582,32 @@
 
 .form__emotions {
   padding: 22px 21px 132px 20px;
+  border: 2px solid $grey;
+  border-radius: 1px;
 
   @media (min-width: $tablet-width) {
-    padding: 22px 21px 132px 20px;
+    padding: 22px 245px 132px 20px;
+    margin-left: 60px;
+    margin-bottom: 53px;
+    margin-top: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 22px 547px 94px 20px;
   }
 }
 
-.form__description::placeholder {
+.form__emotions::placeholder {
+  width: 240px;
   align-items: center;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
   color: $menu-color;
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+  }
 }
 
 
@@ -474,6 +653,7 @@
     justify-content: space-between;
     margin: 0 auto;
     border: none;
+    margin-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {

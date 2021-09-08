@@ -25,7 +25,7 @@
   padding: 21px 20px;
   box-sizing: border-box;
   align-items: center;
-  border-bottom: 1px solid $black;
+  box-shadow: 0 1px 0 #000000;
 
   @media (min-width: $tablet-width) {
     min-height: 109px;
