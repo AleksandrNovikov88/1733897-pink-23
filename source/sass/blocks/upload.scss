@@ -35,18 +35,6 @@
   }
 }
 
-/*  @media (min-width: $tablet-width) {
-    padding-top: 57px;
-    padding-bottom: 54px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 940px;
-    margin: 0 auto;
-    padding-bottom: 57px;
-  }
-} */
-
 .upload__form {
   width: 280px;
   margin: 0 auto;
@@ -107,7 +95,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
-    width: 277px;
+    width: 253px;
     margin: 0;
     padding: 0;
     margin-bottom: 95px;
@@ -116,12 +104,110 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 105px;
+    width: 380px;
   }
 }
 
 .upload__edit-tools {
   border: none;
   background: transparent;
+  padding: 0;
+}
+
+
+// Стили для свг бегунков
+
+
+// Палочки
+
+.upload__item:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 129px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba($menu-color, 0.1);
+
+  @media (min-width: $tablet-width) {
+    top: 56px;
+    width: 275px;
+  }
+}
+
+.upload__item:nth-child(2)::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 114px;
+    width: 275px;
+    height: 1px;
+    background-color: rgba($menu-color, 0.1);
+  }
+}
+
+.upload__item:nth-child(3)::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 176px;
+    width: 275px;
+    height: 1px;
+    background-color: rgba($menu-color, 0.1);
+  }
+}
+
+// Значки инструментов (обрезка, заливка)
+
+.upload__edit-tools--pruning svg {
+  fill: $pink;
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+    fill: $pink;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.upload__edit-tools--fill svg {
+  fill: $menu-color;
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 24px;
+    height: 22px;
+    fill: $pink;
+    opacity: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 48px;
+    height: 43px;
+  }
+}
+
+.upload__edit-tools--saturation svg {
+  fill: $menu-color;
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 16px;
+    fill: $pink;
+    opacity: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .upload__pruning-controls--current {
@@ -130,7 +216,7 @@
 
   @media (min-width: $tablet-width) {
     top: -15px;
-    left: 73px;
+    left: 55px;
   }
 }
 
@@ -142,7 +228,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 45px;
-    left: 73px;
+    left: 55px;
   }
 }
 
@@ -154,7 +240,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 105px;
-    left: 73px;
+    left: 55px;
   }
 }
 

@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-color: $blueblack;
+  background-size: cover;
 
   @media (min-width: $tablet-width) {
     padding-top: 110px;
@@ -141,7 +142,6 @@
 }
 
 .form__label {
-  margin-left: 20px;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
@@ -149,18 +149,19 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-right: 20px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
   }
 }
 
 .form__input {
-  padding: 23px 89px 23px 20px;
+  padding: 23px 20px 23px 20px;
   border: 2px solid $grey;
   border-radius: 1px;
-
-  @media (min-width: $tablet-width) {
-    padding: 23px 246px 16px 20px;
-  }
 }
 
 .form__input::placeholder {
@@ -206,7 +207,7 @@
   font-size: 18px;
   line-height: 30px;
   color: $menu-color;
-  margin-left: 79px;
+  margin-left: 57px;
 
   @media (min-width: $desktop-width) {
     margin-left: 70px;
@@ -215,17 +216,6 @@
 
 // Псевдоэлементы чекбокса достижений
 
-
-.form__input-checkbox:checked + label::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -57px;
-  width: 40px;
-  height: 40px;
-  background-image: url("../img/form/checkbox-on.svg");
-  background-repeat: no-repeat;
-}
 
 .form__input-checkbox + label::before {
   content: "";
@@ -238,18 +228,40 @@
   background-repeat: no-repeat;
 }
 
-// Псевдоэлементы радио-кнопок
-
-.form__input-radio:checked + label::before {
+.form__input-checkbox:hover + label::before {
   content: "";
   position: absolute;
-  top: -5px;
+  top: -4px;
   left: -57px;
-  width: 42px;
-  height: 42px;
-  background-image: url("../img/form/radio-on.svg");
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/form/checkbox-hover.svg");
   background-repeat: no-repeat;
 }
+
+.form__input-checkbox:active + label::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -57px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/form/checkbox-down.svg");
+  background-repeat: no-repeat;
+}
+
+.form__input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -47px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/form/checkbox-tick.svg");
+  background-repeat: no-repeat;
+}
+
+// Псевдоэлементы радио-кнопок
 
 .form__input-radio + label::before {
   content: "";
@@ -259,6 +271,39 @@
   width: 42px;
   height: 42px;
   background-image: url("../img/form/radio-off.svg");
+  background-repeat: no-repeat;
+}
+
+.form__input-radio:hover + label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -57px;
+  width: 42px;
+  height: 42px;
+  background-image: url("../img/form/radio-hover.svg");
+  background-repeat: no-repeat;
+}
+
+.form__input-radio:active + label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -57px;
+  width: 42px;
+  height: 42px;
+  background-image: url("../img/form/radio-down.svg");
+  background-repeat: no-repeat;
+}
+
+.form__input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -43px;
+  width: 42px;
+  height: 42px;
+  background-image: url("../img/form/ellipse-small.svg");
   background-repeat: no-repeat;
 }
 
@@ -287,9 +332,13 @@
 
 .form__item--username {
   margin-bottom: 29px;
+  display: flex;
+  flex-direction: column;
 
 
   @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 56px;
     margin-left: 0;
   }
@@ -297,31 +346,64 @@
 
 .form__input--name {
   @media (min-width: $tablet-width) {
-    padding-right: 350px;
+    width: 561px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 163px;
+    width: 376px;
   }
 }
 
 .form__input--family {
   @media (min-width: $tablet-width) {
-    padding-right: 310px;
+    width: 521px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 122px;
+    width: 366px;
   }
 }
 
 .form__input--patronymic {
   @media (min-width: $tablet-width) {
-    padding-right: 310px;
+    width: 521px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 122px;
+    width: 366px;
+  }
+}
+
+.form__label--family {
+  margin-left: 22px;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.form__label--name {
+  margin-left: 22px;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.form__label--patronymic {
+  margin-left: 22px;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -376,7 +458,6 @@
   @media (min-width: $tablet-width) {
     order: 3;
     padding-top: 41px;
-    padding-bottom: 37px;
   }
 
   @media (min-width: $desktop-width) {
@@ -401,6 +482,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    width: 493px;
   }
 
   @media (min-width: $desktop-width) {
@@ -411,22 +493,56 @@
 }
 
 .form__item--contacts {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 433px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
   }
 }
 
-.form__label--contacts {
+.form__item--contacts:nth-child(1) {
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 29px;
+  }
+}
+
+.form__label--phone {
+  margin-left: 22px;
+  margin-bottom: 17px;
+
   @media (min-width: $tablet-width) {
     order: 2;
+    margin-bottom: 41px;
+    margin-left: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+    margin-left: 18px;
   }
 }
 
-.form__label--contacts:first-child {
+.form__label--email {
+  margin-left: 22px;
+  margin-bottom: 17px;
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 41px;
+    order: 2;
+    margin-bottom: 37px;
+    margin-left: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+    margin-left: 18px;
   }
 }
 
@@ -434,6 +550,7 @@
   @media (min-width: $tablet-width) {
     order: 1;
     margin-bottom: 22px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -446,17 +563,8 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 433px;
-    width: 59px;
-    height: 59px;
-    background-image: url("../img/form/phone-icon.svg");
-  }
-
-  @media (min-width: $desktop-width) {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 306px;
+    left: auto;
+    right: 0;
     width: 59px;
     height: 59px;
     background-image: url("../img/form/phone-icon.svg");
@@ -468,14 +576,11 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 433px;
+    left: auto;
+    right: 0;
     width: 59px;
     height: 59px;
     background-image: url("../img/form/mail-icon.svg");
-  }
-
-  @media (min-width: $desktop-width) {
-    left: 306px;
   }
 }
 
@@ -584,6 +689,7 @@
   padding: 22px 21px 132px 20px;
   border: 2px solid $grey;
   border-radius: 1px;
+  resize: none;
 
   @media (min-width: $tablet-width) {
     padding: 22px 245px 132px 20px;
