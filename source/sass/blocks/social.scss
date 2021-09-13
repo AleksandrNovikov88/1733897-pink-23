@@ -7,6 +7,14 @@
   display: flex;
   justify-content: space-between;
   width: 177px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
 }
 
 // Стайлгайд

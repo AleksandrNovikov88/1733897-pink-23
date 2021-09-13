@@ -30,8 +30,8 @@
 .form__title {
   width: 230px;
   margin: 0 auto;
-  padding-top: 36px;
-  padding-bottom: 51px;
+  padding-top: 28px;
+  padding-bottom: 45px;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
@@ -45,14 +45,20 @@
     padding-top: 70px;
     padding-bottom: 58px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 760px;
+    padding-top: 60px;
+    padding-bottom: 88px;
+  }
 }
 
 .form__title-text {
   width: 280px;
   margin: 0 auto;
   padding: 0;
-  margin-top: 54px;
-  margin-bottom: 55px;
+  margin-top: 45px;
+  margin-bottom: 33px;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
@@ -62,10 +68,14 @@
   @media (min-width: $tablet-width) {
     width: 490px;
     font-size: 18px;
+    margin-top: 89px;
+    margin-bottom: 73px;
   }
 
   @media (min-width: $desktop-width) {
     width: 756px;
+    margin-top: 90px;
+    margin-bottom: 86px;
   }
 }
 
@@ -93,7 +103,7 @@
   width: 280px;
   padding: 0;
   margin: 0 auto;
-  padding-bottom: 44px;
+  padding-bottom: 0;
 
   @media (max-width: $mobile-width-only) {
     border: none;
@@ -102,7 +112,6 @@
   @media (min-width: $tablet-width) {
     width: 620px;
     padding: 0;
-    margin-bottom: 70px;
     border: 2px solid $grey;
   }
 }
@@ -164,6 +173,15 @@
   border-radius: 1px;
 }
 
+.form__input:hover,
+.form__input:focus {
+  border: $menu-color;
+}
+
+.form__input:active {
+  border: $pink;
+}
+
 .form__input::placeholder {
   font-weight: normal;
   font-size: 18px;
@@ -188,8 +206,8 @@
 
 
 .form__wrapper {
-  padding-top: 42px;
-  margin-bottom: 55px;
+  padding-top: 64px;
+  margin-bottom: 26px;
 
   @media (max-width: $mobile-width-only) {
     background-color: $lightgrey;
@@ -220,7 +238,8 @@
 .form__input-checkbox + label::before {
   content: "";
   position: absolute;
-  top: -5px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -57px;
   width: 40px;
   height: 40px;
@@ -231,7 +250,8 @@
 .form__input-checkbox:hover + label::before {
   content: "";
   position: absolute;
-  top: -4px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -57px;
   width: 40px;
   height: 40px;
@@ -242,7 +262,8 @@
 .form__input-checkbox:active + label::before {
   content: "";
   position: absolute;
-  top: -4px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -57px;
   width: 40px;
   height: 40px;
@@ -253,10 +274,11 @@
 .form__input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  top: 6px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -47px;
-  width: 40px;
-  height: 40px;
+  width: 22px;
+  height: 20px;
   background-image: url("../img/form/checkbox-tick.svg");
   background-repeat: no-repeat;
 }
@@ -266,18 +288,24 @@
 .form__input-radio + label::before {
   content: "";
   position: absolute;
-  top: -5px;
-  left: -57px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -71px;
   width: 42px;
   height: 42px;
   background-image: url("../img/form/radio-off.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    left: -62px;
+  }
 }
 
 .form__input-radio:hover + label::before {
   content: "";
   position: absolute;
-  top: -5px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -57px;
   width: 42px;
   height: 42px;
@@ -288,7 +316,8 @@
 .form__input-radio:active + label::before {
   content: "";
   position: absolute;
-  top: -5px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -57px;
   width: 42px;
   height: 42px;
@@ -299,12 +328,17 @@
 .form__input-radio:checked + label::after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: -43px;
-  width: 42px;
-  height: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -57px;
+  width: 16px;
+  height: 16px;
   background-image: url("../img/form/ellipse-small.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    left: -48px;
+  }
 }
 
 
@@ -331,7 +365,7 @@
 }
 
 .form__item--username {
-  margin-bottom: 29px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 
@@ -339,7 +373,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     align-items: center;
-    margin-bottom: 56px;
+    margin-bottom: 49px;
     margin-left: 0;
   }
 }
@@ -376,7 +410,7 @@
 
 .form__label--family {
   margin-left: 22px;
-  margin-bottom: 17px;
+  margin-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     margin-right: 20px;
@@ -387,7 +421,7 @@
 
 .form__label--name {
   margin-left: 22px;
-  margin-bottom: 17px;
+  margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
     margin-right: 20px;
@@ -398,7 +432,7 @@
 
 .form__label--patronymic {
   margin-left: 22px;
-  margin-bottom: 17px;
+  margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
     margin-right: 20px;
@@ -408,24 +442,30 @@
 }
 
 
-// Для блока с выбором приложения
+// С каким приложением путешествовали?
 
 
 .form__wrapper--application {
+  padding-top: 40px;
+  padding-bottom: 44px;
+  margin-bottom: 39px;
+
   @media (min-width: $tablet-width) {
     order: 2;
+    padding-top: 1px;
+    margin-bottom: 8px;
   }
 
   @media (min-width: $desktop-width) {
     width: 431px;
     margin: 0;
-    margin-top: -15px;
+    margin-top: -21px;
   }
 }
 
 .form__group--application {
   @media (min-width: $tablet-width) {
-    padding-bottom: 66px;
+    padding-bottom: 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -434,10 +474,11 @@
 }
 
 .form__text--application {
-  margin-bottom: 52px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     width: 368px;
+    margin-bottom: 41px;
   }
 }
 
@@ -448,7 +489,19 @@
 }
 
 .form__item--radio {
-  margin-bottom: 62px;
+  margin-bottom: 46px;
+}
+
+.form__label-switch--rаdio {
+  margin-left: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 131px;
+  }
 }
 
 //  Для блока контактная информация
@@ -457,13 +510,13 @@
 .form__group--form-contacts {
   @media (min-width: $tablet-width) {
     order: 3;
-    padding-top: 41px;
+    padding-top: 29px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
     width: 100%;
-    margin-bottom: 69px;
+    margin-bottom: 52px;
   }
 }
 
@@ -479,16 +532,20 @@
 }
 
 .form__list--container {
+  margin-bottom: 39px;
+
   @media (min-width: $tablet-width) {
+    width: 493px;
     display: flex;
     flex-wrap: wrap;
-    width: 493px;
+    margin-bottom: 27px;
   }
 
   @media (min-width: $desktop-width) {
     flex-wrap: nowrap;
-    width: 816px;
+    width: 818px;
     justify-content: space-between;
+    margin-bottom: 0;
   }
 }
 
@@ -500,7 +557,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 433px;
+    width: 496px;
+    margin-left: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -510,38 +568,38 @@
 
 .form__item--contacts:nth-child(1) {
   @media (max-width: $mobile-width-only) {
-    margin-bottom: 29px;
+    margin-bottom: 15px;
   }
 }
 
 .form__label--phone {
   margin-left: 22px;
-  margin-bottom: 17px;
+  margin-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     order: 2;
-    margin-bottom: 41px;
+    margin-bottom: 30px;
     margin-left: 17px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 13px;
     margin-left: 18px;
   }
 }
 
 .form__label--email {
   margin-left: 22px;
-  margin-bottom: 17px;
+  margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
     order: 2;
-    margin-bottom: 37px;
+    margin-bottom: 0;
     margin-left: 17px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 13px;
     margin-left: 18px;
   }
 }
@@ -549,12 +607,12 @@
 .form__input--contacts {
   @media (min-width: $tablet-width) {
     order: 1;
-    margin-bottom: 22px;
-    padding-bottom: 16px;
+    margin-bottom: 13px;
+    padding: 20px 20px 20px 17px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 23px 178px 16px 20px;
+    padding: 23px 184px 18px 20px;
   }
 }
 
@@ -600,16 +658,18 @@
 
 .form__group--achievements {
   @media (min-width: $tablet-width) {
-    padding-bottom: 61px;
+    padding-bottom: 0;
+    margin-top: 52px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
+    margin-top: 0;
   }
 }
 
 .form__text--achievements {
-  margin-bottom: 55px;
+  margin-bottom: 42px;
   width: 252px;
 
   @media (min-width: $tablet-width) {
@@ -627,7 +687,7 @@
 }
 
 .form__item--achievements {
-  margin-bottom: 69px;
+  margin-bottom: 52px;
 
   @media (min-width: $desktop-width) {
     width: 33%;
@@ -664,42 +724,49 @@
 
 .form__group--emotions {
   order: 5;
-  padding-bottom: 52px;
-  //margin-bottom: 52px;
+  padding-bottom: 42px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 65px;
     padding-bottom: 0;
+    margin-top: 53px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
+    margin-top: 58px;
   }
 }
 
 .form__text--emotions {
-  margin-bottom: 22px;
+  margin-bottom: 17px;
 
   @media (min-width: $tablet-width) {
     width: 260px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 19px;
+  }
 }
 
 .form__emotions {
-  padding: 22px 21px 132px 20px;
+  padding: 12px 28px 104px 20px;
   border: 2px solid $grey;
   border-radius: 1px;
   resize: none;
 
   @media (min-width: $tablet-width) {
-    padding: 22px 245px 132px 20px;
+    padding: 16px 248px 95px 20px;
     margin-left: 60px;
-    margin-bottom: 53px;
-    margin-top: 47px;
+    margin-bottom: 46px;
+    margin-top: 11px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 22px 547px 94px 20px;
+    padding: 15px 568px 30px 16px;
+    margin-top: 7px;
+    margin-bottom: 39px;
   }
 }
 
@@ -722,13 +789,25 @@
 
 .form__button {
   @include button-style;
-  margin-bottom: 46px;
-  padding: 23px 45px 23px 45px;
+  margin-bottom: 33px;
+  padding: 15px 49px 18px 45px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    padding: 15px 56px 18px 58px;
   }
+}
+
+.form__button:hover,
+.form__button:focus {
+  background-color: $green-hover;
+  border-radius: 1px;
+}
+
+.form__button:active {
+  background: $green-hover;
+  color: rgba($white, $alpha: 0.3);
 }
 
 .form__required-fields {
@@ -746,10 +825,30 @@
     margin: 0;
     align-self: center;
   }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
-.form__required-fields span {
+.form__asterisk {
   color: $pink;
+}
+
+.form__required-fields--desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $menu-color;
+  }
 }
 
 .form__group--button {

@@ -1,33 +1,41 @@
 // @import ("blocks/information.scss");
 
 
+.information {
+  z-index: 0;
+}
+
 .information__text-container {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
+  justify-content: space-between;*/
   width: 280px;
-  justify-content: space-between;
   margin: auto;
-  margin-top: 46px;
+  margin-top: 42px;
   margin-bottom: 70px;
 
   @media (min-width: $tablet-width) {
     width: 588px;
     margin: 0 auto;
-    margin-top: 58px;
+    margin-top: 42px;
     margin-bottom: 19px;
   }
 
   @media (min-width: $desktop-width) {
     width: 780px;
     margin: 0 auto;
-    margin-top: 77px;
+    margin-top: 57px;
     margin-bottom: 66px;
   }
 }
 
 .information__header-text:nth-child(1) {
+  margin-bottom: 29px;
+
+
   @media (min-width: $tablet-width) {
     width: 588px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -73,21 +81,22 @@
 .information__list {
   @include list-style;
   text-align: center;
-  padding-top: 53px;
+  padding-top: 43px;
 
   @media (min-width: $tablet-width) {
     width: 310px;
     margin: 0;
     margin-left: auto;
-    padding-top: 103px;
+    padding-top: 88px;
     padding-right: 20px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
-    width: 877px;
+    width: 887px;
     margin: 0 auto;
+    padding: 0;
   }
 }
 
@@ -98,7 +107,7 @@
   color: $black;
   margin: 0;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
     text-align: start;
@@ -107,7 +116,7 @@
   @media (min-width: $desktop-width) {
     width: 240px;
     margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 22px;
     font-size: 30px;
     line-height: 30px;
     text-align: center;
@@ -116,7 +125,7 @@
 
 .information__description {
   margin: 0;
-  margin-bottom: 48px;
+  margin-bottom: 31px;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -138,10 +147,14 @@
 
 
 .information__item:not(:last-child) {
-  margin-bottom: 43px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
   }
 }
 
@@ -159,15 +172,12 @@
   }
 }
 
-.information__item:nth-child(3) {
-  position: relative;
-}
-
 .information__iphone {
   @media (min-width: $tablet-width) {
+    z-index: 0;
     position: absolute;
-    right: 370px;
-    top: -400px;
+    right: 353px;
+    top: -353px;
     width: 268px;
     height: 547px;
   }
@@ -189,13 +199,128 @@
 .information__item div {
   @media (min-width: $desktop-width) {
     order: 2;
+    z-index: 2;
   }
 }
 
 .information__item img {
   @media (min-width: $desktop-width) {
     order: 1;
+    z-index: 0;
     align-self: center;
-    margin-bottom: 59px;
+    margin-bottom: -35px;
+  }
+}
+
+// Псевдоэлементы и Тени для телефонов
+
+.information__item:nth-child(3) {
+  position: relative;
+}
+
+.information__item:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 418px;
+  width: 100%;
+  height: 95px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    left: -331px;
+    top: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 331px;
+    left: 0;
+    background-color: $lightgrey;
+  }
+}
+
+// Тень
+
+.information__item:nth-child(3)::after {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 325px;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 49.8%, rgba(0, 0, 0, 0) 93.23%);
+    opacity: 0.3;
+    filter: blur(4px);
+  }
+}
+
+.information__item:nth-child(2) {
+  position: relative;
+}
+
+.information__item:nth-child(2)::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 331px;
+    width: 100%;
+    height: 95px;
+    background-color: $lightgrey;
+  }
+}
+
+// Тень
+
+.information__item:nth-child(2)::after {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 325px;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 49.8%, rgba(0, 0, 0, 0) 93.23%);
+    opacity: 0.3;
+    filter: blur(4px);
+  }
+}
+
+.information__item:nth-child(1) {
+  position: relative;
+}
+
+.information__item:nth-child(1)::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 331px;
+    width: 100%;
+    height: 95px;
+    background-color: $lightgrey;
+  }
+}
+
+// Тень
+
+.information__item:nth-child(1)::after {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 325px;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 49.8%, rgba(0, 0, 0, 0) 93.23%);
+    opacity: 0.3;
+    filter: blur(4px);
   }
 }
