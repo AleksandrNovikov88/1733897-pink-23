@@ -9,6 +9,10 @@
 .page-header__menu-open {
   background-color: $menu-color;
 
+  .main-nav__toggle--closed {
+    display: none;
+  }
+
   @media (max-width: $tablet-width-only) {
     background-color: $menu-color;
   }
@@ -22,9 +26,16 @@
   /*display: flex;
   justify-content: space-between;
   padding: 21px 20px 0 20px;*/
+  .main-nav__toggle--open {
+    display: none;
+  }
 
   .main-nav__list {
     display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline-flex;
+    }
   }
 }
 
@@ -71,6 +82,16 @@
 .page-header__logo {
   width: 74px;
   height: 23px;
+
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
+    height: 40px;
+  }
 }
 
 .page-header__img {

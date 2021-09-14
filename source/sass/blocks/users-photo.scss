@@ -251,10 +251,6 @@
   padding: 6px 20px 6px 19px;
   text-transform: uppercase;
   margin-left: 160px;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
 }
 
 .users-photo__author {
