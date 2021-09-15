@@ -19,12 +19,12 @@
 }
 
 .page-header__menu-closed {
-  /*display: flex;
-  justify-content: space-between;
-  padding: 21px 20px 0 20px;*/
-
   .main-nav__list {
     display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline-flex;
+    }
   }
 }
 
@@ -71,6 +71,16 @@
 .page-header__logo {
   width: 74px;
   height: 23px;
+
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
+    height: 40px;
+  }
 }
 
 .page-header__img {
