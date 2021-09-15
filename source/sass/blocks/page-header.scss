@@ -9,10 +9,6 @@
 .page-header__menu-open {
   background-color: $menu-color;
 
-  .main-nav__toggle--closed {
-    display: none;
-  }
-
   @media (max-width: $tablet-width-only) {
     background-color: $menu-color;
   }
@@ -23,13 +19,6 @@
 }
 
 .page-header__menu-closed {
-  /*display: flex;
-  justify-content: space-between;
-  padding: 21px 20px 0 20px;*/
-  .main-nav__toggle--open {
-    display: none;
-  }
-
   .main-nav__list {
     display: none;
 
