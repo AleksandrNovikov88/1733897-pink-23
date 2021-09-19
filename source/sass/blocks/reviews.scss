@@ -1,23 +1,25 @@
 // @import ("blocks/reviews.scss");
 
-
 .reviews__item:nth-child(2),
 .reviews__item:nth-child(3) {
   display: none;
 }
 
 .reviews__wrapper {
-  padding-top: 0;
-  margin-top: -45px;
+  margin-top: -87px;
+  background-color: $white;
+  position: relative;
+  padding-top: 43px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
+    margin-top: -88px;
   }
 
   @media (min-width: $desktop-width) {
     position: relative;
     width: 1200px;
     margin: auto;
+    margin-top: -42px;
   }
 }
 
@@ -38,14 +40,16 @@
 // Кавычки
 
 .reviews__wrapper::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -113px;
-  width: 79px;
-  height: 63px;
-  background-image: url("../img/quotes.svg");
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -77px;
+    width: 79px;
+    height: 63px;
+    background-image: url("../img/quotes.svg");
+  }
 }
 
 // Стрелки
@@ -57,7 +61,7 @@
     display: inline-block;
     position: absolute;
     left: 123px;
-    top: 27px;
+    top: 62px;
     border: none;
     background: transparent;
   }
@@ -70,7 +74,7 @@
     display: inline-block;
     position: absolute;
     left: 1042px;
-    top: 27px;
+    top: 63px;
     border: none;
     background: transparent;
   }

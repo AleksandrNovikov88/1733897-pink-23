@@ -14,11 +14,19 @@
   background-size: cover;
   background-color: $blueblack;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.png");
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 110px;
     margin-top: -110px;
     background-image: url("../img/back-tablet.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -26,6 +34,10 @@
     margin-top: -110px;
     background-image: url("../img/back-desktop.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.png");
+    }
   }
 }
 
@@ -50,8 +62,8 @@
 
   @media (min-width: $desktop-width) {
     width: 357px;
-    padding-top: 74px;
-    padding-bottom: 104px;
+    padding-top: 59px;
+    padding-bottom: 90px;
   }
 }
 
@@ -71,16 +83,21 @@
 .users-photo__list--grid-container {
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(2, 300px);
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(3, 300px);
   }
 }
 
 .users-photo__item--anna {
+  position: relative;
+
   @media (min-width: $tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -89,6 +106,15 @@
   @media (min-width: $desktop-width) {
     grid-column-start: 1;
     grid-column-end: 4;
+  }
+}
+
+.users-photo__photo-anna {
+  max-width: none;
+  margin-left: -20px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: -130px;
   }
 }
 
@@ -101,13 +127,38 @@
   @media (min-width: $tablet-width) {
     margin-right: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.users-photo__item:not(:first-child) {
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.users-photo__item:not(:first-child) a {
+  @media (min-width: $tablet-width) {
+    height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    height: 400px;
+  }
 }
 
 
 // Выравнивание элементов каталога в гриде
 
 
-.users-photo__item:nth-child(2) {
+/*.users-photo__item:nth-child(2) {
   @media (min-width: $tablet-width) {
     margin-right: 10px;
     margin-top: 23px;
@@ -133,6 +184,7 @@
   @media (min-width: $desktop-width) {
     margin-right: 0;
     margin-left: 10px;
+    margin-top: 23px;
   }
 }
 
@@ -161,7 +213,7 @@
   @media (min-width: $tablet-width) {
     margin-left: 10px;
   }
-}
+}*/
 
 // Выравнивание "нравиться"
 
@@ -183,37 +235,47 @@
   line-height: 30px;
   color: $menu-color;
   text-align: center;
-  padding: 44px 20px 60px 20px;
+  padding: 44px 20px 50px 20px;
 
   @media (min-width: $tablet-width) {
     width: 570px;
-    padding: 93px 20px 85px 20px;
+    padding: 93px 20px 76px 20px;
     font-size: 18px;
   }
 
   @media (min-width: $desktop-width) {
     width: 572px;
-    padding: 92px 20px 97px 20px;
+    padding: 92px 20px 88px 20px;
   }
 }
 
 // общие стили для блоков blockquote
 
 .users-photo__blockquote {
-  padding: 19px 17px 25px 17px;
+  padding: 10px 13px 25px 13px;
 
   @media (min-width: $tablet-width) {
-    padding: 30px;
+    padding: 29px;
     position: relative;
+    padding-top: 12px;
+    padding-bottom: 29px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 31px 27px;
+    padding: 11px 27px 33px 27px;
   }
 }
 
 // Выравнивание блоков blockquote по одному
 
+
+/*.users-photo__blockquote--levon {
+  padding-top: 9px;
+}
+
+.users-photo__blockquote--anton {
+  padding-top: 9px;
+}
 
 .users-photo__blockquote--anna {
   padding: 19px 13px 25px 15px;
@@ -223,26 +285,14 @@
   }
 }
 
-.users-photo__blockquote--levon {
-  padding: 9px 17px 25px 17px;
-}
-
-.users-photo__blockquote--anton {
-  padding: 8px 17px 25px 17px;
-}
-
 .users-photo__blockquote--boris,
 .users-photo__blockquote--maksim {
   padding: 10px 17px 25px 17px;
-}
-
-.users-photo__blockquote--sergey,
-.users-photo__blockquote--nadejda {
-  padding: 9px 17px 25px 17px;
-}
+}*/
 
 .users-photo__panorama {
   position: absolute;
+  left: -20px;
   font-weight: bold;
   font-size: 12px;
   line-height: 24px;
@@ -251,6 +301,16 @@
   padding: 6px 20px 6px 19px;
   text-transform: uppercase;
   margin-left: 160px;
+
+  @media (min-width: $tablet-width) {
+    top: 57px;
+    left: 320px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 53px;
+    left: 639px;
+  }
 }
 
 .users-photo__author {
@@ -272,6 +332,9 @@
 
 .users-photo__item blockquote {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .users-photo__item p {
@@ -282,6 +345,10 @@
   margin: 0;
   margin-bottom: 11px;
   flex: 1 0 auto;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+  }
 }
 
 .users-photo__item--anna p {
@@ -302,17 +369,22 @@
   @media (min-width: $tablet-width) {
     margin-left: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 6px;
+  }
 }
 
 .users-photo__likes--absolute {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 33px;
+    top: 13px;
     left: 474px;
   }
 
   @media (min-width: $desktop-width) {
     left: 789px;
+    top: 14px;
   }
 }
 

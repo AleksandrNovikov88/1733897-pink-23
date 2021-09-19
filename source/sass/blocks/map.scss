@@ -1,0 +1,44 @@
+// @import ("blocks/map.scss");
+
+.map {
+  position: relative;
+  background-color: $white;
+}
+
+.map__container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.map__container {
+  width: 100%;
+  margin: 0 auto;
+  height: 200px;
+
+  @media (min-width: $tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 502px;
+    margin-bottom: -36px;
+  }
+}
+
+.map::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  right: 0;
+  border: 162px solid transparent;
+  border-top: 58px solid $white;
+
+  @media (min-width: $tablet-width) {
+    bottom: 155px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 283px;
+  }
+}
