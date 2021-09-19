@@ -149,12 +149,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: block;
     height: 400px;
   }
-}
-
-.users-photo__item a {
-  display: block;
 }
 
 
@@ -291,11 +288,6 @@
 .users-photo__blockquote--boris,
 .users-photo__blockquote--maksim {
   padding: 10px 17px 25px 17px;
-}
-
-.users-photo__blockquote--sergey,
-.users-photo__blockquote--nadejda {
-  padding: 9px 17px 25px 17px;
 }*/
 
 .users-photo__panorama {
@@ -376,6 +368,10 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 6px;
   }
 }
 
