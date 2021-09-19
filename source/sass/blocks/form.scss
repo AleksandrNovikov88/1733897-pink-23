@@ -12,11 +12,19 @@
   background-color: $blueblack;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.png");
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 110px;
     margin-top: -110px;
     background-image: url("../img/back-tablet.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -24,6 +32,10 @@
     margin-top: -110px;
     background-image: url("../img/back-desktop.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.png");
+    }
   }
 }
 
@@ -863,5 +875,6 @@
 
   @media (min-width: $desktop-width) {
     width: 940px;
+    margin-bottom: -25px;
   }
 }
